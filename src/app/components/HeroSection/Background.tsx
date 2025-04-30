@@ -1,7 +1,7 @@
 // src/app/components/HeroSection/Background.tsx
 export const Background = () => {
   return (
-    <>
+    <div className="absolute inset-0 -z-10">
       <img
         src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/12bf4ad164c299f1889bdac8da2b849e43c3a1d4?placeholderIfAbsent=true"
         alt="Background decoration"
@@ -12,6 +12,7 @@ export const Background = () => {
         alt="Background overlay"
         className="object-cover absolute inset-0 size-full"
       />
-    </>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/20" />
+    </div>
   );
 };

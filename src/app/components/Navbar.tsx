@@ -78,7 +78,7 @@ export const Navbar = () => {
       <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* Main Content */}
-      <div className={`drawer-content ${(isScrolled) ? "bg-gray-50 shadow-md opacity-100": ""} fixed top-0 z-10 flex min-w-full items-center justify-center transition-all duration-700`}>
+      <div className={`drawer-content ${(isScrolled) ? "bg-gray-50 shadow-md opacity-100": ""} fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
         <div className="navbar px-4 sm:px-8 py-4 flex items-center justify-center">
           {/* Mobile Menu Button */}
           <div className="flex-1 md:hidden">

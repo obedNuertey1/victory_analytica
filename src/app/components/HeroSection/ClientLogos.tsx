@@ -34,19 +34,24 @@ export const ClientLogos = () => {
   ];
 
   return (
-    <section className="flex relative flex-col px-96 py-32 mt-28 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full">
-      <h2 className="self-start text-2xl font-semibold leading-none text-center text-gray-900 max-md:max-w-full">
-        Join in our ever growing client list
+    <section className="mt-20 md:mt-32 lg:mt-40 container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-xl md:text-2xl font-semibold text-gray-900 text-center md:text-left">
+        Join our ever-growing client list
       </h2>
 
-      <div className="flex overflow-hidden flex-wrap gap-7 justify-between items-center mt-6 w-full max-md:max-w-full">
+      <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
         {logos.map((logo, index) => (
-          <img
-            key={index}
-            src={logo.src}
-            alt={`Client logo ${index + 1}`}
-            className={`object-contain shrink-0 self-stretch my-auto aspect-[${logo.aspect}] w-[${logo.width}px]`}
-          />
+          <div key={index} className="flex items-center justify-center p-2">
+            <img
+              src={logo.src}
+              alt={`Client logo ${index + 1}`}
+              className="max-h-12 md:max-h-16 w-auto object-contain"
+              style={{
+                aspectRatio: logo.aspect,
+                width: `${logo.width}px`
+              }}
+            />
+          </div>
         ))}
       </div>
     </section>
