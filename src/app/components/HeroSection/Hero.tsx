@@ -12,7 +12,7 @@ export const Hero = () => {
         reliable, and cost-effective services to address your unique challenges.
       </p>
 
-      <div className="mt-12 md:mt-16 lg:mt-20 max-w-2xl">
+      <div className="mt-12 md:mt-16 lg:mt-20 max-w-2xl justify-right float-right">
         <p className="text-base md:text-lg lg:text-xl">
           Transform your business with expert engineering, seamless migrations,
           and innovative digital solutions, no matter where you are.

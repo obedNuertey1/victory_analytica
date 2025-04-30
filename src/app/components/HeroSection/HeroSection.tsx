@@ -11,7 +11,7 @@ function HeroSection() {
       <Background />
       <Navbar />
       <main className="relative z-10 pt-20 md:pt-32 pb-24 md:pb-40">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-h-[calc(100vh-4rem)] overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-h-[calc(100vh-4rem)]  overflow-hidden">
           <Hero />
         </div>
         <ClientLogos />
