@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui"; 
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Optimize animation performance */
+  img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
