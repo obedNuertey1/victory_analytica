@@ -3,6 +3,7 @@ import HeroSection from "@/app/components/HeroSection/HeroSection";
 import ExpertiseSection from "@/app/components/ExpertiseSection/ExpertiseSection";
 import ImpactSection from "@/app/components/ImpactSection/ImpactSection";
 import WhyChooseSection from "@/app/components/WhyChooseSection/WhyChooseSection";
+import SuccessStories from "@/app/components/SuccessStories/SuccessStories";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ExpertiseSection />
       <ImpactSection />
       <WhyChooseSection />
+      <SuccessStories />
     </div>
   );
 }
