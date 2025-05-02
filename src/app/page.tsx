@@ -5,6 +5,7 @@ import ImpactSection from "@/app/components/ImpactSection/ImpactSection";
 import WhyChooseSection from "@/app/components/WhyChooseSection/WhyChooseSection";
 import SuccessStories from "@/app/components/SuccessStories/SuccessStories";
 import FaqSection from "@/app/components/FaqSection/FaqSection";
+import ContactSection from "@/app/components/ContactSection/ContactSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyChooseSection />
       <SuccessStories />
       <FaqSection />
+      <ContactSection />
     </div>
   );
 }
