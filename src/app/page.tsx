@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
 import ExpertiseSection from "@/app/components/ExpertiseSection/ExpertiseSection";
 import ImpactSection from "@/app/components/ImpactSection/ImpactSection";
+import WhyChooseSection from "@/app/components/WhyChooseSection/WhyChooseSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection/>
       <ExpertiseSection />
       <ImpactSection />
+      <WhyChooseSection />
     </div>
   );
 }
