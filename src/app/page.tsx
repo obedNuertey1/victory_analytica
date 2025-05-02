@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
 import ExpertiseSection from "@/app/components/ExpertiseSection/ExpertiseSection";
+import ImpactSection from "@/app/components/ImpactSection/ImpactSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       {/* <Background /> */}
       <HeroSection/>
       <ExpertiseSection />
+      <ImpactSection />
     </div>
   );
 }

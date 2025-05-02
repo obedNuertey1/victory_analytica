@@ -9,6 +9,7 @@ module.exports = {
     // ... rest of your config
   },
   plugins: [  require('@tailwindcss/container-queries'),
-    require('@tailwindcss/typography')],
+    require('@tailwindcss/typography'),  require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio')],
 }
 
