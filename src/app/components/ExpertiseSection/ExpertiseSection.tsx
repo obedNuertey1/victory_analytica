@@ -21,16 +21,6 @@ export const ExpertiseSection: React.FC = () => {
       style={{ opacity }}
     >
       {/* Background image with parallax effect */}
-      {/* <motion.div 
-        className="absolute inset-0 -z-10"
-        style={{ y }}
-      >
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/7cb592d7d2b33b2a5d7b343867c8de634fddbf72?placeholderIfAbsent=true"
-          alt="Decorative background"
-          className="w-full h-full object-cover"
-        />
-      </motion.div> */}
             <motion.div 
         className="absolute inset-0 -z-10"
         style={{ y }}
