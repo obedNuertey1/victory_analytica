@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSectionPartial from "@/app/components/HeroSection/HeroSectionPartial";
 import StorySection from '../components/StorySection/StorySection';
 import ValuePropositionSection from "@/app/components/ValuePropositionSection/ValuePropositionSection";
+import TeamSection from "@/app/components/TeamSection/TeamSection";
 
 
 function page() {
@@ -13,6 +14,7 @@ function page() {
         />
         <StorySection />
         <ValuePropositionSection />
+        <TeamSection />
     </div>
   )
 }

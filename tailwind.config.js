@@ -16,6 +16,9 @@ module.exports = {
       },
       maxWidth: {
         '7xl': '1280px'
+      },
+      backdropBlur: {
+        sm: '4px',
       }
     }
     // ... rest of your config
