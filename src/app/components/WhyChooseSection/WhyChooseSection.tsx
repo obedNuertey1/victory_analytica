@@ -22,7 +22,7 @@ export const WhyChooseSection: React.FC = () => {
       style={{ opacity }}
     >
       {/* Background Layer */}
-      <motion.div
+      {/* <motion.div
         className="absolute inset-0 -z-10"
         style={{ y }}
       >
@@ -32,6 +32,18 @@ export const WhyChooseSection: React.FC = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-gray-100/50" />
         </BackgroundImage>
+      </motion.div> */}
+
+<motion.div 
+        className="absolute inset-0 -z-10"
+        style={{ y }}
+      >
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/77795b531a9fdb993763ef213660c950c3884fce?placeholderIfAbsent=true"
+          className="object-center w-full h-full"
+          alt="Decorative background"
+        />
+        <div className="absolute inset-0 bg-[url('https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/f5e30eaf5347545e91046e8705775d6b26e8274d?placeholderIfAbsent=true')] mix-blend-overlay" />
       </motion.div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

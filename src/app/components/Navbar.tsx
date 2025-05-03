@@ -1,13 +1,17 @@
+// src\app\components\Navbar.tsx
 "use client";
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion } from "framer-motion";
+import ConsultationButton from "./ConsultationButton";
+import "./Navbar.css";
 
 const NavItem = ({
   text,
   isActive = false,
   onClick,
-  href="#"
+  href = "#"
 }: {
   text: string;
   isActive?: boolean;
@@ -15,13 +19,36 @@ const NavItem = ({
   href?: string;
 }) => (
   <Link
-    href={`${href}`}
+    href={href}
     onClick={onClick}
-    className={`px-4 py-2 rounded-lg not-md:text-2xl ${isActive ? 'text-blue-500 underline' : 'text-gray-900'} 
-      hover:bg-gray-100 transition-colors duration-200`}
+    className={`relative px-4 py-2 not-md:text-2xl font-medium transition-all duration-300 ${
+      isActive 
+        ? 'text-blue-600' 
+        : 'text-gray-600 hover:text-gray-900'
+    }`}
     aria-current={isActive ? "page" : undefined}
   >
-    {text}
+    <span className="flex items-center gap-2">
+      {text}
+      {isActive && (
+        <motion.span
+          className="absolute inset-x-0 bottom-5 h-[1px] bg-gradient-to-r from-blue-400 to-blue-600"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        />
+      )}
+    </span>
+    
+    {/* Hover effect */}
+    {!isActive && (
+      <motion.span
+        className="absolute inset-x-0 bottom-5 h-[1px] bg-gray-200"
+        initial={{ scaleX: 0 }}
+        whileHover={{ scaleX: 1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      />
+    )}
   </Link>
 );
 
@@ -30,7 +57,7 @@ const NavItemMobile = ({
   isActive = false,
   onClick,
   icon,
-  href =  "#"
+  href = "#"
 }: {
   text: string;
   isActive?: boolean;
@@ -68,7 +95,7 @@ export const Navbar = () => {
       window.addEventListener('scroll', handleScroll);
       // Initial check
       handleScroll();
-      
+
       return () => window.removeEventListener('scroll', handleScroll);
     }
   }, []);
@@ -78,7 +105,7 @@ export const Navbar = () => {
       <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* Main Content */}
-      <div className={`drawer-content ${(isScrolled) ? "bg-gray-50 shadow-md opacity-100": ""} fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
+      <div className={`drawer-content ${(isScrolled) ? "bg-gray-50 shadow-md opacity-100" : ""} fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
         <div className="navbar px-4 sm:px-8 py-4 flex items-center justify-center">
           {/* Mobile Menu Button */}
           <div className="flex-1 md:hidden">
@@ -113,32 +140,56 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden md:flex flex-1 justify-between items-center max-w-[1218px] max-md:max-w-full">
-            <div className="flex items-center gap-1.5">
-              <div className="w-6 h-6 bg-gray-900 rounded-sm" />
-              <span className="text-xl">ABC Company</span>
+          <div className="hidden md:flex flex-1 justify-between items-center max-w-7xl mx-auto px-8">
+            {/* Branding */}
+            <motion.div
+              className="flex items-center gap-3"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">AC</span>
+              </div>
+              <span className="text-xl font-semibold text-gray-900">ABC Company</span>
+            </motion.div>
+
+            {/* Navigation Links */}
+            <div className="flex items-center gap-6 mx-8">
+              {[
+                { text: "Home", path: "/" },
+                { text: "About Us", path: "/about" },
+                { text: "Case Studies", path: "/case-studies" },
+                { text: "Services", path: "/services" },
+                { text: "Contact Us", path: "/contact" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="relative group"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 0.3 }}
+                >
+                  <NavItem
+                    text={item.text}
+                    isActive={pathName === item.path}
+                    href={item.path}
+                  />
+                  <div className="absolute bottom-5 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                </motion.div>
+              ))}
             </div>
 
-            <div className="flex items-center gap-2 mx-4">
-              <NavItem text="Home" isActive={pathName === "/"} />
-              <div className="w-2.5 h-2.5 bg-gray-900 rounded-full" />
-              <NavItem text="About Us" isActive={pathName === "/about"} />
-              <div className="w-2.5 h-2.5 bg-gray-900 rounded-full" />
-              <NavItem text="Case Studies" isActive={pathName === "/case-studies"} />
-              <div className="w-2.5 h-2.5 bg-gray-900 rounded-full" />
-              <NavItem text="Services" isActive={pathName === "/services"} />
-              <div className="w-2.5 h-2.5 bg-gray-900 rounded-full" />
-              <NavItem text="Contact Us" isActive={pathName === "/contact"} />
-            </div>
-
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/d38c8c93a564088312c95cd8902607820f5ba37f?placeholderIfAbsent=true"
-              alt="Company logo"
-              className="object-contain aspect-[3.65] w-[197px]"
-            />
+            {/* Logo */}
+            <motion.div
+              // src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/d38c8c93a564088312c95cd8902607820f5ba37f?placeholderIfAbsent=true"
+              // alt="Company logo"
+              className="object-contain w-40 hover:scale-105 transition-transform duration-300"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            ><ConsultationButton /></motion.div>
           </div>
-          {/* <div className='flex min-w-full items-center justify-center'>
-          </div> */}
         </div>
       </div>
 
@@ -217,11 +268,11 @@ export const Navbar = () => {
 
           {/* Company Logo Card */}
           <div className="mt-8 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/d38c8c93a564088312c95cd8902607820f5ba37f?placeholderIfAbsent=true"
-              alt="Company logo"
+            <div
               className="w-full opacity-90 hover:opacity-100 transition-opacity"
-            />
+            >
+              <ConsultationButton className="m-auto" />
+            </div>
             <p className="text-center text-sm text-gray-500 mt-2">
               Trusted Since 2015
             </p>

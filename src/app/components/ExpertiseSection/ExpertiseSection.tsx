@@ -21,7 +21,7 @@ export const ExpertiseSection: React.FC = () => {
       style={{ opacity }}
     >
       {/* Background image with parallax effect */}
-      <motion.div 
+      {/* <motion.div 
         className="absolute inset-0 -z-10"
         style={{ y }}
       >
@@ -30,6 +30,17 @@ export const ExpertiseSection: React.FC = () => {
           alt="Decorative background"
           className="w-full h-full object-cover"
         />
+      </motion.div> */}
+            <motion.div 
+        className="absolute inset-0 -z-10"
+        style={{ y }}
+      >
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/77795b531a9fdb993763ef213660c950c3884fce?placeholderIfAbsent=true"
+          className="object-cover w-full h-full"
+          alt="Decorative background"
+        />
+        <div className="absolute inset-0 bg-[url('https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/f5e30eaf5347545e91046e8705775d6b26e8274d?placeholderIfAbsent=true')] mix-blend-overlay" />
       </motion.div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
