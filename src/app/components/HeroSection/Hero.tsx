@@ -33,7 +33,7 @@ export const Hero: React.FC<HeroProps<string>> = ({
       {
         leftParagraphText
         &&
-        <p className="mt-6 md:mt-8 text-base md:text-lg lg:text-xl max-w-2xl">
+        <p className="mt-6 md:mt-8 text-base md:text-lg lg:text-xl ">
           {leftParagraphText}
         </p>
       }

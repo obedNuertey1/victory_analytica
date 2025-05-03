@@ -1,0 +1,48 @@
+// src\app\components\ValuePropositionSection\ValueCard.tsx
+"use client";
+import { motion } from "framer-motion";
+import * as React from "react";
+
+interface ValueCardProps<S>{
+  title?: S;
+  description?: S;
+  imageSrc?: S;
+  backgroundSrc?: S;
+}
+
+export const ValueCard: React.FC<ValueCardProps<string>> = ({
+  title,
+  description,
+  imageSrc,
+  backgroundSrc,
+}) => {
+  return (
+    <motion.article
+      className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full"
+      whileHover={{ y: -5 }}
+    >
+      <img
+        src={backgroundSrc}
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
+        alt="Card background"
+      />
+      <div className="relative flex flex-col items-center justify-center p-8 bg-white/90 backdrop-blur-sm h-full">
+        {imageSrc && (
+          <motion.img
+            src={imageSrc}
+            className="w-32 h-32 mb-6 object-contain"
+            alt={title}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          />
+        )}
+        <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mb-4 text-center">
+          {title}
+        </h3>
+        <p className="text-gray-600 text-center leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </motion.article>
+  );
+};
