@@ -3,6 +3,7 @@ import HeroSectionPartial from "@/app/components/HeroSection/HeroSectionPartial"
 import StorySection from '../components/StorySection/StorySection';
 import ValuePropositionSection from "@/app/components/ValuePropositionSection/ValuePropositionSection";
 import TeamSection from "@/app/components/TeamSection/TeamSection";
+import JoinUsSection from "@/app/components/JoinUsSection/JoinUsSection";
 
 
 function page() {
@@ -15,6 +16,7 @@ function page() {
         <StorySection />
         <ValuePropositionSection />
         <TeamSection />
+        <JoinUsSection />
     </div>
   )
 }
