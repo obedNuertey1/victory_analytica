@@ -6,6 +6,7 @@ import ValuePropositionSection from "@/app/components/ValuePropositionSection/Va
 import TeamSection from "@/app/components/TeamSection/TeamSection";
 import JoinUsSection from "@/app/components/JoinUsSection/JoinUsSection";
 import TestimonialQuoteSection from "@/app/components/TestimonialQuoteSection/TestimonialQuoteSection";
+import ContactSection from "@/app/components/ContactSection/ContactSection";
 
 
 function page() {
@@ -20,6 +21,7 @@ function page() {
         <TeamSection />
         <JoinUsSection />
         <TestimonialQuoteSection />
+        <ContactSection />
     </div>
   )
 }
