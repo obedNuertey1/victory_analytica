@@ -1,7 +1,6 @@
 import React from 'react';
 import HeroSectionPartial from "@/app/components/HeroSection/HeroSectionPartial";
 import ContactSection from "@/app/components/ContactSection/ContactSection";
-import ExpertiseSection from "@/app/components/ExpertiseSection/ExpertiseSection";
 
 function page() {
     return (
@@ -11,7 +10,6 @@ function page() {
                 leftParagraphText={"Transforming Businesses with Tailored Engineering Solutions"}
                 rightParagraphText={"From startups to multinational enterprises, our services are designed to address your unique challenges and help you achieve measurable success."}
             />
-            <ExpertiseSection />
             <ContactSection />
         </div>
     )
