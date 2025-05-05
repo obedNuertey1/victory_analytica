@@ -7,11 +7,10 @@ function page() {
     return (
         <div className="flex flex-col self-stretch">
             <HeroSectionPartial
-                firstBlockText={"Frequently"}
-                secondBlockText={"Asked Questions"}
+                firstBlockText={"Frequently Asked Questions"}
                 leftParagraphText={"Your questions, our answers"}
                 rightParagraphText={
-                    "Here you’ll find clear, concise information on our services, processes, and how ABC Company can help your business succeed. Still need help? Reach out to us below."
+                    "Find expert guidance on international business setup, tiered service models (Silver to Elite), and compliance architecture. Need tailored security solutions? Request a consultation below."
                 }
             />
             <FaqSection />

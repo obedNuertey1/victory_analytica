@@ -115,18 +115,26 @@ function ContactFormSection() {
         >
           <motion.div variants={itemVariants}>
             <FormInput
-              label="Company Name"
+              label="Full Name (*)"
               type="text"
-              placeholder="Global Enterprises Inc"
+              placeholder="e.g Michael Dwayne"
+              aria-label="Full Name"
+            />
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <FormInput
+              label="Company Name (optional)"
+              type="text"
+              placeholder="e.g Global Enterprises Inc"
               aria-label="Company Name"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
             <FormInput
-              label="Home Country"
+              label="Email address (*)"
               type="text"
-              placeholder="Country of Origin"
-              aria-label="Home Country"
+              placeholder="e.g michael@globalenterprises.com"
+              aria-label="Email address" 
             />
           </motion.div>
         </motion.section>
@@ -137,13 +145,13 @@ function ContactFormSection() {
         >
           <motion.div variants={itemVariants}>
             <FormDropdown
-              label="Service Tier"
+              label="Service Tier (optional)"
               options={services.map(service => service.title)}
             />
           </motion.div>
           <motion.div variants={itemVariants}>
             <FormInput
-              label="Investment Range"
+              label="Investment Range (optional)"
               type="text"
               placeholder="$5k - $100k+"
               aria-label="Investment Range"
@@ -153,7 +161,7 @@ function ContactFormSection() {
 
         <motion.div variants={itemVariants}>
           <FormInput
-            label="Priority Compliance Needs"
+            label="Priority Compliance Needs (optional)"
             type="text"
             placeholder="Tax, Workforce, Asset Management"
             aria-label="Compliance Needs"
@@ -162,8 +170,8 @@ function ContactFormSection() {
 
         <motion.div variants={itemVariants}>
         <FormTextarea 
-            label="Expansion Strategy" 
-            placeholder="Describe your US market entry objectives and regulatory concerns..." 
+            label="Message (*)" 
+            placeholder="Enter your message here..." 
             aria-label="Strategy Details" 
           />
         </motion.div>
