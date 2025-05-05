@@ -16,7 +16,7 @@ export const FooterContent: React.FC = () => {
           initial={{ x: -20 }}
           whileInView={{ x: 0 }}
         >
-          <div className="w-12 h-12 bg-gray-900 rounded-lg" />
+          <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center" ><span className="text-white font-bold text-xl">VA</span></div>
           <h2 className="text-3xl font-bold text-gray-900">Victory Analytica & Security LLC</h2>
         </motion.div>
         <p className="text-gray-600 mb-6">
