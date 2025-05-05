@@ -8,7 +8,7 @@ function page() {
         <div className="flex flex-col self-stretch">
             <HeroSectionPartial
                 firstBlockText={"Get In Touch"}
-                leftParagraphText={"Transforming Businesses with Tailored Engineering Solutions"}
+                leftParagraphText={"We help businesses expand globally with strategic consulting, data-driven insights, and security‑focused project management."}
                 rightParagraphText={"From startups to multinational enterprises, our services are designed to address your unique challenges and help you achieve measurable success."}
             />
             <ContactFormSection />

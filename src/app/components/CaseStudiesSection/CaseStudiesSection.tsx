@@ -31,37 +31,28 @@ export const CaseStudiesSection: React.FC = () => {
 
   const caseStudies = [
     {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/a61400166fe7bf77385e967d394cf154dac2d0d7?placeholderIfAbsent=true",
-      title: "Seamless Legacy System Migration for a Healthcare Enterprise",
-      challenge: "Challenge",
-      challengeDescription:
-        "The client's outdated system was causing inefficiencies, data loss, and scalability issues.",
-      solution: "Solution",
-      solutionDescription:
-        "ABC Company developed a custom migration strategy, ensuring seamless data transfer, modernizing the infrastructure, and integrating the system with advanced analytics tools.",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/a61400166fe7bf77385e967d394cf154dac2d0d7?placeholderIfAbsent=true",
+      title: "Healthcare Compliance Navigation in California",
+      challenge: "Regulatory Hurdles",
+      challengeDescription: "European medical device firm faced complex FDA compliance and California business registration challenges",
+      solution: "Platinum Model Execution",
+      solutionDescription: "Implemented full-spectrum compliance strategy including EIN/ITIN processing and state-specific legal requirements within 3 weeks"
     },
     {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/a0d03dd17532e1cf3ba9d329902b80d0609f0004?placeholderIfAbsent=true",
-      title: "Accelerating MVP Development for a FinTech Startup",
-      challenge: "Challenge",
-      challengeDescription:
-        "The startup needed a stable MVP within a tight timeline to secure investor funding.",
-      solution: "Solution",
-      solutionDescription:
-        "Our automated teams delivered a bug-free MVP in just 6 weeks, using agile development practices to meet the client's requirements.",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/a0d03dd17532e1cf3ba9d329902b80d0609f0004?placeholderIfAbsent=true",
+      title: "FinTech Secure Market Entry",
+      challenge: "Cross-Border Compliance",
+      challengeDescription: "African payment platform needed urgent US banking setup and cybersecurity integration for Series A funding",
+      solution: "Elite Model Deployment",
+      solutionDescription: "Delivered turnkey solution with business registration, asset management, and compliance certification in 4 weeks"
     },
     {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/bdff6b4c0389f5c78de191aadcd4b092f27e37e9?placeholderIfAbsent=true",
-      title: "Scalable ERP Implementation for a Retail Chain",
-      challenge: "Challenge",
-      challengeDescription:
-        "The retail client struggled with fragmented operations across multiple locations, affecting efficiency and reporting accuracy.",
-      solution: "Solution",
-      solutionDescription:
-        "ABC Company implemented a customized ERP system, integrating inventory, sales, and finance operations into a single streamlined platform.",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/bdff6b4c0389f5c78de191aadcd4b092f27e37e9?placeholderIfAbsent=true",
+      title: "Retail Chain Asset Optimization",
+      challenge: "Operational Fragmentation",
+      challengeDescription: "Global retailer struggled with multi-state tax compliance and inventory management across US locations",
+      solution: "Diamond Model Strategy",
+      solutionDescription: "Implemented centralized asset management system with vendor network and tax optimization framework"
     },
   ];
 
@@ -93,7 +84,7 @@ export const CaseStudiesSection: React.FC = () => {
             variants={itemVariants}
             className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            Discover how our tailored solutions have transformed businesses across industries.
+            Discover how our tiered service models drive secure international expansions and operational excellence
           </motion.p>
         </header>
 
@@ -122,94 +113,3 @@ export const CaseStudiesSection: React.FC = () => {
 };
 
 export default CaseStudiesSection;
-
-// // src\app\components\CaseStudiesSection\CaseStudiesSection.tsx
-// "use client";
-
-// import React from "react";
-// import { CaseStudyCard } from "./CaseStudyCard";
-// import { CTAButton } from "./CTAButton";
-
-// export const CaseStudiesSection: React.FC = () => {
-  // const caseStudies = [
-  //   {
-  //     imageUrl:
-  //       "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/a61400166fe7bf77385e967d394cf154dac2d0d7?placeholderIfAbsent=true",
-  //     title: "Seamless Legacy System Migration for a Healthcare Enterprise",
-  //     challenge: "Challenge",
-  //     challengeDescription:
-  //       "The client's outdated system was causing inefficiencies, data loss, and scalability issues.",
-  //     solution: "Solution",
-  //     solutionDescription:
-  //       "ABC Company developed a custom migration strategy, ensuring seamless data transfer, modernizing the infrastructure, and integrating the system with advanced analytics tools.",
-  //   },
-  //   {
-  //     imageUrl:
-  //       "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/a0d03dd17532e1cf3ba9d329902b80d0609f0004?placeholderIfAbsent=true",
-  //     title: "Accelerating MVP Development for a FinTech Startup",
-  //     challenge: "Challenge",
-  //     challengeDescription:
-  //       "The startup needed a stable MVP within a tight timeline to secure investor funding.",
-  //     solution: "Solution",
-  //     solutionDescription:
-  //       "Our automated teams delivered a bug-free MVP in just 6 weeks, using agile development practices to meet the client's requirements.",
-  //   },
-  //   {
-  //     imageUrl:
-  //       "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/bdff6b4c0389f5c78de191aadcd4b092f27e37e9?placeholderIfAbsent=true",
-  //     title: "Scalable ERP Implementation for a Retail Chain",
-  //     challenge: "Challenge",
-  //     challengeDescription:
-  //       "The retail client struggled with fragmented operations across multiple locations, affecting efficiency and reporting accuracy.",
-  //     solution: "Solution",
-  //     solutionDescription:
-  //       "ABC Company implemented a customized ERP system, integrating inventory, sales, and finance operations into a single streamlined platform.",
-  //   },
-  // ];
-
-//   return (
-//     <section
-//       className="flex overflow-hidden relative flex-col justify-center items-center self-stretch px-20 py-24 min-h-[1234px] max-md:px-5"
-//       role="region"
-//       aria-label="Featured Case Studies"
-//     >
-//       <img
-//         src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/394cc2ad38f61453dd26a00ae0d05a4813e15fc5?placeholderIfAbsent=true"
-//         className="object-cover absolute inset-0 size-full"
-//         alt=""
-//         aria-hidden="true"
-//       />
-//       <div className="flex relative flex-col justify-center w-full max-w-[1216px] max-md:max-w-full">
-//         <header className="w-full text-gray-900 max-md:max-w-full">
-//           <h1 className="text-7xl leading-tight max-md:max-w-full max-md:text-4xl">
-//             Featured Case Studies
-//           </h1>
-//           <p className="mt-6 text-lg max-md:max-w-full">
-//             Discover how our tailored solutions have transformed businesses
-//             across industries.
-//           </p>
-//         </header>
-
-//         <div className="flex flex-wrap gap-7 items-start mt-11 w-full text-blue-500 max-md:mt-10 max-md:max-w-full">
-//           {caseStudies.map((study, index) => (
-//             <CaseStudyCard
-//               key={index}
-//               imageUrl={study.imageUrl}
-//               title={study.title}
-//               challenge={study.challenge}
-//               challengeDescription={study.challengeDescription}
-//               solution={study.solution}
-//               solutionDescription={study.solutionDescription}
-//             />
-//           ))}
-//         </div>
-
-//         <div className="flex justify-center mt-11 max-md:mt-10">
-//           <CTAButton text="View More" />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default CaseStudiesSection;

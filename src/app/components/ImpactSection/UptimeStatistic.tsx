@@ -20,7 +20,7 @@ export const UptimeStatistic: React.FC<UptimeStatisticProps> = ({
       transition={{ duration: 0.8, delay: 0.3 }}
     >
       <motion.h2 
-        className="font-bold text-blue-500"
+        className="font-bold text-blue-500 text-2xl"
         initial={{ scale: 0.9 }}
         whileInView={{ scale: 1 }}
       >

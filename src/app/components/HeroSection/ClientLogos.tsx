@@ -56,7 +56,7 @@ export const ClientLogos = () => {
   });
 
   return (
-    <div className="mt-20 md:mt-32 lg:mt-40 container mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mt-20 md:mt-32 lg:mt-40 container mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       <h2 className="text-xl md:text-2xl font-semibold text-gray-900 text-center mb-8">
         Join our ever-growing client list
       </h2>

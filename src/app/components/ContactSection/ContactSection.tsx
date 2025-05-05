@@ -41,7 +41,7 @@ export const ContactSection: React.FC = () => {
       style={{ opacity }}
     >
       {/* Parallax Background */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 -z-10"
         style={{ y }}
       >
@@ -68,13 +68,12 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Get in Touch Today
+              Get In Touch Today
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              Let's create the future of your business together. Whether you
-              need consulting, development, or robust digital solutions, ABC
-              Company is here to help.
+            We help businesses expand globally with strategic consulting, data-driven insights, and security‑focused project management.
             </p>
+
           </motion.header>
 
           {/* Contact Cards Grid */}

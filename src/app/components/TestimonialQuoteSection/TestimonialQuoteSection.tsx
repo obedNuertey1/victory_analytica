@@ -13,8 +13,8 @@ export default function TestimonialQuoteSection() {
 
   const quoteVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: "easeOut" }
     }
@@ -22,7 +22,7 @@ export default function TestimonialQuoteSection() {
 
   const authorVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: { delay: 0.3, duration: 0.6 }
     }
@@ -47,9 +47,10 @@ export default function TestimonialQuoteSection() {
           className="relative mb-8 text-4xl md:text-5xl lg:text-6xl text-center text-gray-900 leading-tight md:leading-[1.1] font-light"
         >
           <span className="text-7xl md:text-8xl absolute -top-4 left-0 opacity-10">“</span>
-          <span className="relative block px-8">
-            Our focus is on creating products and services that empower businesses,
-            streamline operations, and foster growth in the digital era.
+          <span className="relative block not-md:text-3xl md:px-8">
+            We transform global expansion challenges into secure strategic advantages -
+            where compliance architecture meets AI-driven market intelligence to
+            safeguard your cross-border success.
           </span>
           <span className="text-7xl md:text-8xl absolute -bottom-8 right-0 opacity-10">”</span>
         </motion.blockquote>
@@ -60,10 +61,12 @@ export default function TestimonialQuoteSection() {
         >
           <cite className="not-italic">
             <span className="block text-xl md:text-2xl mb-2 font-semibold">
-              Panduka Weerasekara
+              Victor Narwortey
             </span>
             <span className="block text-gray-600 text-base md:text-lg">
-              Co-Founder, ABC Company
+              Founder & Security Architect, Victory Analytica & Security LLC
+              <br />
+              Certified Global Business Strategist (CGBS)
             </span>
           </cite>
         </motion.footer>

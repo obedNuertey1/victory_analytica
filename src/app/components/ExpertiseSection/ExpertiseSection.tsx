@@ -18,7 +18,7 @@ export const ExpertiseSection: React.FC = () => {
     <motion.section
       ref={ref}
       className="relative py-24 md:py-32 lg:py-48 overflow-hidden"
-      style={{ opacity }}
+      // style={{ opacity }}
     >
       {/* Background image with parallax effect */}
       <motion.div

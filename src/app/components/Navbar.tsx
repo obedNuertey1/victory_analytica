@@ -21,7 +21,7 @@ const NavItem = ({
   <Link
     href={href}
     onClick={onClick}
-    className={`relative px-4 py-2 not-md:text-2xl font-medium transition-all duration-300 ${isActive
+    className={`relative px-4 py-2 not-lg:text-2xl font-medium transition-all duration-300 ${isActive
         ? 'text-blue-600'
         : 'text-gray-600 hover:text-gray-900'
       }`}
@@ -104,18 +104,18 @@ export const Navbar = () => {
       <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* Main Content */}
-      <div className={`drawer-content ${(isScrolled) ? "bg-gray-50 shadow-md opacity-100" : ""} fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
+      <div className={`drawer-content ${(isScrolled) ? "bg-gray-50 shadow-lg opacity-100" : ""} fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
         <div className="navbar px-4 sm:px-8 py-4 flex items-center justify-center">
           {/* Mobile Menu Button */}
-          <div className="flex-1 md:hidden">
+          <div className="flex-1 lg:hidden">
             <div className="flex items-center gap-1.5">
               <div className="w-6 h-6 rounded-sm" />
-              <span className="text-xl">ABC Company</span>
+              <span className="text-xl">Victory Analytica</span>
             </div>
           </div>
 
           {/* Hamburger Icon */}
-          <div className="flex-none md:hidden">
+          <div className="flex-none lg:hidden">
             <label
               htmlFor="nav-drawer"
               className="btn btn-ghost btn-square drawer-button"
@@ -139,7 +139,7 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden md:flex flex-1 justify-between items-center max-w-7xl mx-auto px-8">
+          <div className="hidden lg:flex flex-1 justify-between items-center max-w-7xl mx-auto px-8">
             {/* Branding */}
             <motion.div
               className="flex items-center gap-3"
@@ -148,9 +148,9 @@ export const Navbar = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">AC</span>
+                <span className="text-white font-bold text-sm">VA</span>
               </div>
-              <span className="text-xl font-semibold text-gray-900">ABC Company</span>
+              <span className="text-xl font-semibold text-gray-900">Victory Analytica & Security LLC</span>
             </motion.div>
 
             {/* Navigation Links */}
@@ -204,10 +204,10 @@ export const Navbar = () => {
           {/* Branding Section */}
           <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-100">
             <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AC</span>
+              <span className="text-white font-bold text-sm">VA</span>
             </div>
             <div>
-              <h2 className="text-xl font-bold text-gray-900">ABC Company</h2>
+              <h2 className="text-xl font-bold text-gray-900">Victory Analytica</h2>
               <p className="text-sm text-gray-500">Innovating Solutions</p>
             </div>
           </div>

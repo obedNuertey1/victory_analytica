@@ -56,13 +56,13 @@ export const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
           </div>
         </div>
 
-        <button
+        {/* <button
           className="mt-6 flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
           aria-label={`Read full case study about ${title}`}
         >
           <span>Read Full Case Study</span>
           <span className="transition-transform group-hover:translate-x-1">→</span>
-        </button>
+        </button> */}
       </div>
     </motion.article>
   );

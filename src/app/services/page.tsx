@@ -8,8 +8,8 @@ function page() {
         <div className="flex flex-col self-stretch">
             <HeroSectionPartial
                 firstBlockText={"Our Services"}
-                leftParagraphText={"Transforming Businesses with Tailored Engineering Solutions"}
-                rightParagraphText={"From startups to multinational enterprises, our services are designed to address your unique challenges and help you achieve measurable success."}
+                leftParagraphText={"Empowering Your U.S. Market Entry and Strategic Growth"}
+                rightParagraphText={"At Victory Analytica & Security LLC, we offer tiered consulting models—from Silver to Elite—encompassing international business setup, strategic planning, data science insights, comprehensive security solutions, and project & portfolio management tailored to your timeline and goals."}
             />
             <ExpertiseSection />
             <ContactSection />

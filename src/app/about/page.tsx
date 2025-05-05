@@ -13,7 +13,7 @@ function page() {
   return (
     <div className="flex flex-col self-stretch">
         <HeroSectionPartial
-          firstBlockText={"Global Empowerment Partners"}
+          firstBlockText={"About"}
           rightParagraphText={"Victory Analytica & Security LLC redefines international business consulting through integrated security solutions and data-driven strategy. We specialize in turnkey US market entry, combining legal expertise with cutting-edge threat analysis to safeguard your global expansion."}
         />
         <StorySection />

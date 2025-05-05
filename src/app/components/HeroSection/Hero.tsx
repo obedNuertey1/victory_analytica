@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps<string>> = ({
   rightParagraphText
 }) => {
   return (
-    <section className="text-gray-900 md:-mt-6">
+    <section className="text-gray-900 lg:-mt-6">
       <h1 className="text-4xl md:text-6xl lg:text-8xl xl:text-9xl leading-[1.2] md:leading-[1.1] font-bold">
         {
           firstBlockText 

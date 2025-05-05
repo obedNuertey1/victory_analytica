@@ -8,8 +8,8 @@ function page() {
         <div className="flex flex-col self-stretch">
             <HeroSectionPartial
                 firstBlockText={"Case Studies"}
-                leftParagraphText={"Proven Success Across Industries"}
-                rightParagraphText={"Explore how ABC Company has empowered businesses worldwide with tailored engineering solutions that deliver measurable results."}
+                leftParagraphText={"Get To Know About Our Proven Impact"}
+                rightParagraphText={"Explore how Victory Analytica & Security LLC has empowered clients globally—securing U.S. market entry, optimizing operations, and driving strategic growth through data science, security solutions, and expert project management."}
             />
             <CaseStudiesSection />
             <ContactSection />
