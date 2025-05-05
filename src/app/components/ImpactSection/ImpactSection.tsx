@@ -66,10 +66,10 @@ export const ImpactSection: React.FC = () => {
           {/* Statistics Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl">
             {[
-              { value: "95%", description: "Client Satisfaction Rate" },
-              { value: "300+", description: "Successful Projects" },
-              { value: "40%", description: "Faster MVP Delivery" },
-              { value: "10+", description: "Years of Expertise" },
+              { value: "500+", description: "Businesses Established" },
+              { value: "30+", description: "Countries Served" },
+              { value: "98%", description: "Registration Success" },
+              { value: "15+", description: "Years Combined Experience" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -109,21 +109,17 @@ export const ImpactSection: React.FC = () => {
                   whileInView={{ strokeDasharray: "283 283" }}
                   transition={{ duration: 1.5, delay: 0.5 }}
                 />
-                <foreignObject x="20" y="25" width="60" height="50">
+                <foreignObject x="10" y="25" width="80" height="50">
                   <motion.div
-                    className="w-full h-full flex flex-col items-center justify-center scale-70 p-2"
+                    className="w-full h-full flex flex-col items-center justify-center scale-50 p-2"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                   >
                     <UptimeStatistic
-                      value="99.9%"
-                      description="Uptime Guarantee"
+                      value="360°"
+                      description="Service Coverage"
                     />
-                    {/* <KeyMetric 
-                      label="30+ Clients"
-                      value="99.9%"
-                    /> */}
                   </motion.div>
                 </foreignObject>
               </svg>

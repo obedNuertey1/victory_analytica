@@ -27,7 +27,7 @@ export const UptimeStatistic: React.FC<UptimeStatisticProps> = ({
         {value}
       </motion.h2>
       <motion.p 
-        className="text-lg text-blue-500 max-sm:text-base"
+        className="text-lg text-blue-500 max-sm:text-base text-nowrap"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
