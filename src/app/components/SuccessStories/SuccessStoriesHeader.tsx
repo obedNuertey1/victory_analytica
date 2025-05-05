@@ -1,6 +1,7 @@
 // src\app\components\SuccessStories\SuccessStoriesHeader.tsx
 "use client";
 import { motion } from "framer-motion";
+import * as React from "react";
 
 export const SuccessStoriesHeader: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ export const SuccessStoriesHeader: React.FC = () => {
         className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
         transition={{ duration: 0.5 }}
       >
-        Success Stories
+        Global Success Stories
       </motion.h1>
       <motion.p
         className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
@@ -22,8 +23,8 @@ export const SuccessStoriesHeader: React.FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        Explore how we've transformed challenges into opportunities, driving
-        success for businesses across industries worldwide.
+        Discover how we've enabled secure international expansion and optimized operations 
+        for businesses worldwide through strategic consulting and compliance excellence.
       </motion.p>
     </motion.header>
   );

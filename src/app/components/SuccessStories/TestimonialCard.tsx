@@ -2,6 +2,12 @@
 "use client";
 import { motion } from "framer-motion";
 
+interface TestimonialCardProps {
+  title: string;
+  content: string;
+  author: string;
+}
+
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({
   title,
   content,
