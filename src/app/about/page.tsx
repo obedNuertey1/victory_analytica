@@ -13,8 +13,8 @@ function page() {
   return (
     <div className="flex flex-col self-stretch">
         <HeroSectionPartial
-          firstBlockText={"About Us"}
-          rightParagraphText={"At ABC Company, we are more than just a service provider—we’re your trusted partner in engineering success. With decades of experience and a commitment to excellence, we deliver tailored solutions that help businesses, from startups to global enterprises, achieve their goals."}
+          firstBlockText={"Global Empowerment Partners"}
+          rightParagraphText={"Victory Analytica & Security LLC redefines international business consulting through integrated security solutions and data-driven strategy. We specialize in turnkey US market entry, combining legal expertise with cutting-edge threat analysis to safeguard your global expansion."}
         />
         <StorySection />
         <ValuePropositionSection />
