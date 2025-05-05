@@ -1,5 +1,6 @@
 // src/app/components/HeroSection/HeroSection.tsx
 "use client";
+import React from 'react';
 import { Navbar } from "../Navbar";
 import { Background } from "./Background";
 import { Hero } from "./Hero";
@@ -11,12 +12,17 @@ function HeroSection() {
       <Background />
       <Navbar />
       <main className="relative z-10 pt-20 md:pt-32 pb-24 md:pb-40">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-h-[calc(100vh-4rem)]  overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-h-[calc(100vh-4rem)] overflow-hidden">
           <Hero
-            firstBlockText={"Empowering"}
-            secondBlockText={"Global Businesses"}
-            leftParagraphText={"From startups to multinational corporations, we deliver scalable, reliable, and cost-effective services to address your unique challenges."}
-            rightParagraphText={"Transform your business with expert engineering, seamless migrations, and innovative digital solutions, no matter where you are."}
+            firstBlockText={"Victory Analytica"}
+            secondBlockText={"& Security LLC"}
+            // secondBlockText={"Empowering Global Enterprises"}
+            leftParagraphText={
+              "At Victory Analytica & Security LLC, our mission is to empower businesses globally by providing expert consulting in international business setup, strategic planning, and investment opportunities."
+            }
+            rightParagraphText={
+              "We leverage cutting-edge data science, comprehensive security solutions, and advanced project and portfolio management to help businesses thrive in the U.S. and beyond."
+            }
           />
         </div>
         <ClientLogos />

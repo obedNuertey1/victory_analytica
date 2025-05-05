@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { StatisticItem } from "./StatisticItem";
 import { UptimeStatistic } from "./UptimeStatistic";
+import { ServiceLevelCard } from "./ServiceLevelCard";
+import { KeyMetric } from "./KeyMetrics";
 
 export const ImpactSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -118,6 +120,10 @@ export const ImpactSection: React.FC = () => {
                       value="99.9%"
                       description="Uptime Guarantee"
                     />
+                    {/* <KeyMetric 
+                      label="30+ Clients"
+                      value="99.9%"
+                    /> */}
                   </motion.div>
                 </foreignObject>
               </svg>

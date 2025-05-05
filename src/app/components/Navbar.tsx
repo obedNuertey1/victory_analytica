@@ -21,11 +21,10 @@ const NavItem = ({
   <Link
     href={href}
     onClick={onClick}
-    className={`relative px-4 py-2 not-md:text-2xl font-medium transition-all duration-300 ${
-      isActive 
-        ? 'text-blue-600' 
+    className={`relative px-4 py-2 not-md:text-2xl font-medium transition-all duration-300 ${isActive
+        ? 'text-blue-600'
         : 'text-gray-600 hover:text-gray-900'
-    }`}
+      }`}
     aria-current={isActive ? "page" : undefined}
   >
     <span className="flex items-center gap-2">
@@ -39,7 +38,7 @@ const NavItem = ({
         />
       )}
     </span>
-    
+
     {/* Hover effect */}
     {!isActive && (
       <motion.span
@@ -161,7 +160,8 @@ export const Navbar = () => {
                 { text: "About Us", path: "/about" },
                 { text: "Case Studies", path: "/case-studies" },
                 { text: "Services", path: "/services" },
-                { text: "Contact Us", path: "/contact" }
+                { text: "Contact Us", path: "/contact" },
+                { text: "FAQs", path: "/faq" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -261,6 +261,39 @@ export const Navbar = () => {
               icon={
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              }
+            />
+            <NavItemMobile
+              text="FAQs"
+              href='/faq'
+              isActive={pathName === "/faq"}
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-18c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9.5 9a2.5 2.5 0 115 0c0 1.5-2 2-2 3m0 3h0"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 17.5v.5"
+                  />
                 </svg>
               }
             />

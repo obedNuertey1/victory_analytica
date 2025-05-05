@@ -2,6 +2,13 @@
 import { motion } from "framer-motion";
 import { LearnMoreLink } from "./LearnMoreLink";
 
+interface ServiceCardProps {
+  backgroundImage: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
 export const ServiceCard: React.FC<ServiceCardProps> = ({
   backgroundImage,
   icon,
@@ -24,7 +31,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           src={icon}
           alt="Service icon"
           className="w-16 h-16 md:w-20 md:h-20 mb-6"
-          whileHover={{ rotate: 15, scale: 1.1 }}
+          whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
         
