@@ -21,27 +21,14 @@ export const WhyChooseSection: React.FC = () => {
       className="relative py-24 md:py-32 lg:py-48 overflow-hidden"
       style={{ opacity }}
     >
-      {/* Background Layer */}
-      {/* <motion.div
-        className="absolute inset-0 -z-10"
-        style={{ y }}
-      >
-        <BackgroundImage
-          src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/9d4df529bf4a825dbebc6103a600bc13fd770118?placeholderIfAbsent=true"
-          className="h-full"
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-gray-100/50" />
-        </BackgroundImage>
-      </motion.div> */}
-
-<motion.div 
+      <motion.div 
         className="absolute inset-0 -z-10"
         style={{ y }}
       >
         <img
           src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/77795b531a9fdb993763ef213660c950c3884fce?placeholderIfAbsent=true"
           className="object-center w-full h-full"
-          alt="Decorative background"
+          alt="Security and global business concept"
         />
         <div className="absolute inset-0 bg-[url('https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/f5e30eaf5347545e91046e8705775d6b26e8274d?placeholderIfAbsent=true')] mix-blend-overlay" />
       </motion.div>
@@ -60,11 +47,11 @@ export const WhyChooseSection: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Why Choose ABC Company?
+              Why Choose Victory Analytica & Security?
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide end-to-end solutions to help businesses across
-              industries overcome challenges, innovate, and scale.
+              Strategic consulting for global expansion backed by cutting-edge security solutions
+              and data-driven insights.
             </p>
           </motion.header>
 
@@ -73,22 +60,39 @@ export const WhyChooseSection: React.FC = () => {
               {
                 backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/63b07222cfcb6a5ac33f82c0ac2f4a3cae7bd50d?placeholderIfAbsent=true",
                 imageSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/5ff793cad6cca94d1a4062c0d40605438c10c032?placeholderIfAbsent=true",
-                title: "Global Reach",
-                description: "Serving clients worldwide, from startups to enterprises."
+                title: "Global Business Setup",
+                description: "Complete U.S. market entry including registration, banking, and compliance"
               },
               {
                 backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/cfcf4279e1ec7f30c0e6dcf012222eff6958bfc2?placeholderIfAbsent=true",
-                imageSrc: "https://cdn.builder.io/api/v1/imzage/assets/143904c0c722478ze90e6e96d6b2341b6/6d4d6b74b0a43b373b5dfc8d64f53d2833cfd009?placeholderIfAbsent=true",
-                title: "Scalable Solutions",
-                description: "Flexible services tailored to businesses of all sizes."
+                imageSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/54b0eeb39a0bc891da85cb167744e21648ff2e4a?placeholderIfAbsent=true",
+                title: "Compliance & Security",
+                description: "Full legal and financial compliance with integrated security solutions"
               },
               {
-                backgroundSrc:"https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/63b07222cfcb6a5ac33f82c0ac2f4a3cae7bd50d?placeholderIfAbsent=true",
-                title:"Expertise You Can Trust",
-                description:"Decades of experience delivering quality solutions for complex problems.",
-                imageSrc:"https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/54b0eeb39a0bc891da85cb167744e21648ff2e4a?placeholderIfAbsent=true"
+                backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/63b07222cfcb6a5ac33f82c0ac2f4a3cae7bd50d?placeholderIfAbsent=true",
+                imageSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/6d4d6b74b0a43b373b5dfc8d64f53d2833cfd009?placeholderIfAbsent=true",
+                title: "Asset Management",
+                description: "End-to-end support for acquiring and managing operational assets"
+              },
+              {
+                backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/cfcf4279e1ec7f30c0e6dcf012222eff6958bfc2?placeholderIfAbsent=true",
+                imageSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/5ff793cad6cca94d1a4062c0d40605438c10c032?placeholderIfAbsent=true",
+                title: "Strategic Networking",
+                description: "Premium market insights and connections with key U.S. partners"
+              },
+              {
+                backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/63b07222cfcb6a5ac33f82c0ac2f4a3cae7bd50d?placeholderIfAbsent=true",
+                imageSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/54b0eeb39a0bc891da85cb167744e21648ff2e4a?placeholderIfAbsent=true",
+                title: "Work Permit Solutions",
+                description: "Comprehensive visa and work permit assistance for international teams"
+              },
+              {
+                backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/cfcf4279e1ec7f30c0e6dcf012222eff6958bfc2?placeholderIfAbsent=true",
+                imageSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/6d4d6b74b0a43b373b5dfc8d64f53d2833cfd009?placeholderIfAbsent=true",
+                title: "Data-Driven Strategies",
+                description: "Advanced analytics for optimized operations and investment decisions"
               }
-              // Add other feature cards here
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -99,8 +103,8 @@ export const WhyChooseSection: React.FC = () => {
               >
                 <FeatureCard
                   {...feature}
-                  className="h-full"
-                  imageClassName="w-32 h-32 mb-6"
+                  className="h-full bg-gray-800/80 hover:bg-gray-800/90"
+                  imageClassName="w-24 h-24 mb-6"
                 />
               </motion.div>
             ))}
