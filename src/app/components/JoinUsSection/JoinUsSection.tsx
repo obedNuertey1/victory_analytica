@@ -62,7 +62,7 @@ export const JoinUsSection: React.FC = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto"
           >
-            Looking for a career where you can innovate and make an impact? ABC Company is always on the lookout for passionate individuals to join our growing team.
+            Looking for a career where you can innovate and make an impact? Victory Analytica is always on the lookout for passionate individuals to join our growing team.
           </motion.p>
         </header>
 
