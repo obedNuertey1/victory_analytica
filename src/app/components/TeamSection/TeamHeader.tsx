@@ -22,8 +22,7 @@ export const TeamHeader: React.FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        Our global team of experienced engineers, consultants, and project
-        managers is the backbone of ABC Company.
+        Our global team combines intelligence expertise with cross-border business acumen to secure your expansion.
       </motion.p>
     </motion.header>
   );

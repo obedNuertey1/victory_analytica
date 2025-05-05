@@ -15,7 +15,7 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   imageUrl,
   name,
   role,
-  altText,
+  altText="Victory Analytica security and business expert",
 }) => {
   return (
     <motion.article
