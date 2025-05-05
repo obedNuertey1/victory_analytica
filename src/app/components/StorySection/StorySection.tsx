@@ -18,11 +18,10 @@ const StorySection: React.FC = () => {
     <motion.section
       ref={ref}
       className="relative py-20 px-4 md:py-32 sm:px-6 lg:px-8 overflow-hidden"
-      style={{ opacity }}
     >
       <motion.div
         className="absolute inset-0 -z-10"
-        // style={{ y }}
+        style={{ y }}
       >
         <img
           src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/77795b531a9fdb993763ef213660c950c3884fce?placeholderIfAbsent=true"
