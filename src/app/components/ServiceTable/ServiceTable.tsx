@@ -2,6 +2,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
+import { useEffect, useRef } from 'react';
 import "./ServiceTable.css";
 
 interface ServiceFeature {
@@ -17,6 +18,24 @@ interface ServiceFeature {
 export default function ServiceTable() {
     const searchParams = useSearchParams();
     const highlightedRow = parseInt(searchParams.get('highlight') || '-1');
+
+    const rowRef = useRef<HTMLTableRowElement>(null);
+
+    useEffect(() => {
+        if (rowRef.current && highlightedRow >= 0) {
+            // Smooth scroll to the highlighted row with offset
+            rowRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+
+            // Add temporary highlight animation
+            rowRef.current.classList.add('highlight-pulse');
+            setTimeout(() => {
+                rowRef.current?.classList.remove('highlight-pulse');
+            }, 2000);
+        }
+    }, [highlightedRow]);
 
     const serviceFeatures: ServiceFeature[] = [
         {
@@ -138,7 +157,9 @@ export default function ServiceTable() {
                     {serviceFeatures.map((feature, index) => (
                         <tr
                             key={feature.feature}
-                            className={highlightedRow === index ? 'bg-primary/20 transition-colors' : ''}
+                            className={`${highlightedRow === index ? 'bg-primary/20 transition-colors' : ''} scroll-mt-16`}
+                            ref={index === highlightedRow ? rowRef : null}
+                            id={`row-${index}`}
                         >
                             <td className="font-semibold">{feature.feature}</td>
                             <td>{feature.silver}</td>

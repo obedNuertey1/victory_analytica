@@ -4,3 +4,17 @@
 .bg-platinum { background-color: #e5e4e2 !important; }
 .bg-diamond { background-color: #b9f2ff !important; }
 .bg-elite { background-color: #9966cc !important; }
+
+@keyframes highlight-pulse {
+    0% { background-color: rgba(71, 149, 255, 0.1); }
+    50% { background-color: rgba(71, 149, 255, 0.3); }
+    100% { background-color: rgba(71, 149, 255, 0.1); }
+}
+
+.highlight-pulse {
+    animation: highlight-pulse 1.5s ease-in-out;
+}
+
+.scroll-mt-16 {
+    scroll-margin-top: 4rem; /* Adjust based on your header height */
+}
