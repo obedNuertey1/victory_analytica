@@ -4,55 +4,48 @@ import { motion } from "framer-motion";
 import { TimelineEntry } from "./types";
 
 const timelineData: TimelineEntry[] = [
-    {
-      year: "2017",
-      title: "The Beginning",
-      description:
-        "ABC Company was founded with a vision to provide innovative engineering solutions to startups, focusing on reliability and affordability.",
-      position: "left",
-    },
-    {
-      year: "2018",
-      title: "Expanding Expertise",
-      description:
-        "We diversified our offerings to include legacy system migrations and ERP implementations, catering to small and medium-sized businesses.",
-      position: "right",
-    },
-    {
-      year: "2019",
-      title: "Going Global",
-      description:
-        "ABC Company expanded its reach by serving clients across multiple countries, building strong partnerships with multinational corporations.",
-      position: "left",
-    },
-    {
-      year: "2020",
-      title: "Autonomous Teams Launched",
-      description:
-        "We introduced fully autonomous development teams, enabling clients to scale their projects with ease and efficiency.",
-      position: "right",
-    },
-    {
-      year: "2021",
-      title: "Embracing Cybersecurity",
-      description:
-        "To address growing digital threats, we added comprehensive cybersecurity services, safeguarding our clients' assets worldwide.",
-      position: "left",
-    },
-    {
-      year: "2023",
-      title: "300+ Projects Completed",
-      description:
-        "With over 300 successful projects delivered globally, we solidified our reputation as a leading provider of tailored engineering solutions.",
-      position: "right",
-    },
-    {
-      year: "2024",
-      title: "A Trusted Partner",
-      description:
-        "ABC Company continues to innovate, serving startups, SMBs, and enterprises with a focus on scalable solutions, global collaboration, and unmatched reliability.",
-      position: "left",
-    },
+  {
+    year: "2017",
+    title: "Foundation of Excellence",
+    description: "Victory Analytica established with focus on U.S. business compliance and secure market entry strategies.",
+    position: "left",
+  },
+  {
+    year: "2018",
+    title: "Compliance Framework",
+    description: "Developed proprietary Diamond Model for tax optimization and legal compliance in international expansions.",
+    position: "right",
+  },
+  {
+    year: "2019",
+    title: "Global Security Integration",
+    description: "Implemented cybersecurity protocols across all client operations, setting new industry standards.",
+    position: "left",
+  },
+  {
+    year: "2020",
+    title: "Elite Model Launch",
+    description: "Introduced full-spectrum asset management and workforce solutions for enterprise clients.",
+    position: "right",
+  },
+  {
+    year: "2021",
+    title: "Cross-Border Mastery",
+    description: "Facilitated 100+ successful international expansions with 100% compliance rate.",
+    position: "left",
+  },
+  {
+    year: "2023",
+    title: "Operational Scale",
+    description: "500+ global clients empowered through strategic market entry and compliance solutions.",
+    position: "right",
+  },
+  {
+    year: "2024",
+    title: "Industry Leadership",
+    description: "Recognized as Top 10 Global Business Consultancy by International Trade Association.",
+    position: "left",
+  },
 ];
 
 export const Timeline: React.FC = () => {
