@@ -9,7 +9,7 @@ export const Copyright: React.FC = () => {
   },[]);
   return (
     <div className="flex-1 shrink gap-2.5 self-stretch pb-2.5 mt-11 w-full text-lg text-center basis-0 text-slate-500 max-md:mt-10 max-md:max-w-full">
-      © ABC Company {copyRightYear} | All Rights Reserved
+      © Victory Analytica & Security LLC {copyRightYear} | Compliance Guaranteed
     </div>
   );
 };

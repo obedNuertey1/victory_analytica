@@ -17,11 +17,11 @@ export const FooterContent: React.FC = () => {
           whileInView={{ x: 0 }}
         >
           <div className="w-12 h-12 bg-gray-900 rounded-lg" />
-          <h2 className="text-3xl font-bold text-gray-900">ABC Company</h2>
+          <h2 className="text-3xl font-bold text-gray-900">Victory Analytica</h2>
         </motion.div>
         <p className="text-gray-600 mb-6">
-          We offer a comprehensive suite of digital marketing services that
-          cover all aspects of your online presence.
+          Empowering global business expansion through strategic consulting, 
+          compliance excellence, and data-driven security solutions.
         </p>
         <SocialLinks />
       </div>
@@ -33,14 +33,10 @@ export const FooterContent: React.FC = () => {
         transition={{ delay: 0.2 }}
       >
         <div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Navigation</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Solutions</h3>
           <ul className="space-y-3 text-gray-600">
-            {["About Us", "Case Studies", "Careers", "Contact Us", "T&C", "Privacy Policy"].map((item, index) => (
-              <motion.li
-                key={index}
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+            {["Silver Model", "Gold Model", "Platinum Model", "Diamond Model", "Elite Model", "Compliance Audit"].map((item, index) => (
+              <motion.li key={index} whileHover={{ x: 5 }}>
                 {item}
               </motion.li>
             ))}
@@ -48,14 +44,10 @@ export const FooterContent: React.FC = () => {
         </div>
 
         <div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Services</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Services</h3>
           <ul className="space-y-3 text-gray-600">
-            {["Legacy System Migration", "ERP Implementation", "Engineering Consulting", "Product Consulting", "Automated Teams", "Cybersecurity Services"].map((item, index) => (
-              <motion.li
-                key={index}
-                whileHover={{ x: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+            {["Market Entry Strategy", "Tax Compliance", "Asset Acquisition", "Workforce Solutions", "Security Integration", "Portfolio Management"].map((item, index) => (
+              <motion.li key={index} whileHover={{ x: 5 }}>
                 {item}
               </motion.li>
             ))}

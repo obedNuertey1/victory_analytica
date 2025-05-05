@@ -19,18 +19,18 @@ export const ContactSection: React.FC = () => {
   const contactCards = [
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/36f4b481a12c2022e5cc23a67e91e97470522af3?placeholderIfAbsent=true",
-      title: "Email Us",
-      content: "contact@abccompany.com",
+      title: "Strategic Consultations",
+      content: "strategic@victoryanalytica.com",
     },
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/95d0f31b27628f4f73be7893a0770c96ec4281ba?placeholderIfAbsent=true",
-      title: "Call Us",
-      content: "+1 (XXX) XXX-XXXX",
+      title: "Global Operations",
+      content: "+1 (608) 446-5689",
     },
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/dcfd1cf9c45ba15876e5a76387f0a6e34f23b331?placeholderIfAbsent=true",
-      title: "Visit Us",
-      content: "123, Main Road, London, UK.",
+      title: "HQ & Consultations",
+      content: "1999 Avenue California, Los Angeles, CA 90089",
     },
   ];
 

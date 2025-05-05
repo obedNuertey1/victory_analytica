@@ -3,6 +3,12 @@
 import { motion } from "framer-motion";
 import * as React from "react";
 
+interface ContactCardProps {
+  icon: string;
+  title: string;
+  content: string;
+}
+
 export const ContactCard: React.FC<ContactCardProps> = ({
   icon,
   title,
