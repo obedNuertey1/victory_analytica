@@ -7,6 +7,7 @@ interface ServiceCardProps {
   icon: string;
   title: string;
   description: string;
+  id: string;
 }
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -14,6 +15,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   title,
   description,
+  id
 }) => {
   return (
     <motion.div 
@@ -39,7 +41,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         <p className="text-gray-600 mb-6 flex-1">{description}</p>
         
         <motion.div whileHover={{ x: 5 }}>
-          <LearnMoreLink />
+          <LearnMoreLink id={id} />
         </motion.div>
       </div>
     </motion.div>

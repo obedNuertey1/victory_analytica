@@ -55,61 +55,71 @@ export const ExpertiseSection: React.FC = () => {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/301095be76fe34d210284264bcfab58fde13e993?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/10d9a616d86924f548c28531f04396afe1d75c8c?placeholderIfAbsent=true",
               title: "USA Business Representation",
-              description: "Assign a dedicated U.S. business representative to act on your behalf and facilitate all in‑country engagements."
+              description: "Assign a dedicated U.S. business representative to act on your behalf and facilitate all in‑country engagements.",
+              id: "1"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/301095be76fe34d210284264bcfab58fde13e993?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/9cd2bec387fc81bdf39aec734eac98b702926431?placeholderIfAbsent=true",
               title: "Address & Banking",
-              description: "Secure a U.S.‑based business address and set up corporate bank accounts to streamline your financial operations."
+              description: "Secure a U.S.‑based business address and set up corporate bank accounts to streamline your financial operations.",
+              id: "2"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/396ba8a7c7c5a0f85121857f4033d0a67155b760?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/5b7720715658b3240f4e9e73a878496f6b40bb37?placeholderIfAbsent=true",
               title: "Networking & Market Insights",
-              description: "Provide connections with potential partners and deliver actionable insights into U.S. market trends and opportunities."
+              description: "Provide connections with potential partners and deliver actionable insights into U.S. market trends and opportunities.",
+              id: "3"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/396ba8a7c7c5a0f85121857f4033d0a67155b760?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/71ac10136db59bfb8dfcd08807111cd2083591e3?placeholderIfAbsent=true",
               title: "Orientation Tour",
-              description: "Guide your team through California and Los Angeles tours to understand local business culture and opportunities."
+              description: "Guide your team through California and Los Angeles tours to understand local business culture and opportunities.",
+              id: "4"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/841d04c43aa8ff16de9513695f747bc78b547603?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/7026a445b1e4707ffa48df300ac747eea1c37606?placeholderIfAbsent=true",
               title: "Business Registration",
-              description: "Handle all aspects of California and U.S. business registration, including filings and compliance documentation."
+              description: "Handle all aspects of California and U.S. business registration, including filings and compliance documentation.",
+              id: "5"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/5f4ce075cc719da01f4bef1c456b8334dd4cc598?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/3e7a3599f3b2c1595500d97a6c9003fd99702593?placeholderIfAbsent=true",
               title: "Tax Identification",
-              description: "Assist with applying for ITIN, EIN, and provide guidance on tax planning and compliance requirements."
+              description: "Assist with applying for ITIN, EIN, and provide guidance on tax planning and compliance requirements.",
+              id: "6"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/301095be76fe34d210284264bcfab58fde13e993?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/10d9a616d86924f548c28531f04396afe1d75c8c?placeholderIfAbsent=true",
               title: "Financial & Legal Compliance",
-              description: "Introduce you to professional accountants and legal advisors to ensure full compliance with U.S. regulations."
+              description: "Introduce you to professional accountants and legal advisors to ensure full compliance with U.S. regulations.",
+              id: "7"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/301095be76fe34d210284264bcfab58fde13e993?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/9cd2bec387fc81bdf39aec734eac98b702926431?placeholderIfAbsent=true",
               title: "Identification Services",
-              description: "Support with California State ID applications and identity verification processes for your key personnel."
+              description: "Support with California State ID applications and identity verification processes for your key personnel.",
+              id: "8"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/396ba8a7c7c5a0f85121857f4033d0a67155b760?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/71ac10136db59bfb8dfcd08807111cd2083591e3?placeholderIfAbsent=true",
               title: "Legal Services & Permits",
-              description: "Provide legal consultation and assistance with work permit applications for foreign employees."
+              description: "Provide legal consultation and assistance with work permit applications for foreign employees.",
+              id: "9"
             },
             {
               backgroundImage: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/5f4ce075cc719da01f4bef1c456b8334dd4cc598?placeholderIfAbsent=true",
               icon: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/3e7a3599f3b2c1595500d97a6c9003fd99702593?placeholderIfAbsent=true",
               title: "Asset Acquisition & Management",
-              description: "Full support in acquiring and managing operational assets—property, vehicles, equipment—with legal and financial coordination."
+              description: "Full support in acquiring and managing operational assets—property, vehicles, equipment—with legal and financial coordination.",
+              id: "10"
             }
           ].map((service, index) => (
             <motion.div

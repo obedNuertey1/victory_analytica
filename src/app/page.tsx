@@ -12,6 +12,7 @@ export default function Home() {
     <div className="flex overflow-hidden relative flex-col self-stretch min-h-[1024px]">
       {/* <Background /> */}
       <HeroSection/>
+      {/* ExpertiseSection displays as "Our Services" */}
       <ExpertiseSection />
       <ImpactSection />
       <WhyChooseSection />

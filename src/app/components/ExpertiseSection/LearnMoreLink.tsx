@@ -1,12 +1,21 @@
 // src/app/components/ExpertiseSection/LearnMoreLink.tsx
 "use client";
 import {motion} from "framer-motion"
+import Link from "next/link";
+
+interface LearnMoreLinkProps {
+  label?: string;
+  id?: string;
+}
 
 export const LearnMoreLink: React.FC<LearnMoreLinkProps> = ({
   label = "Learn More",
+  id
 }) => {
+  // get the origin of the url
+  // const origin = window.location.origin;
   return (
-    <div className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-300">
+    <Link href={`/service-table?highlight=${id}`} className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-300">
       <span className="font-semibold">{label}</span>
       <motion.span 
         className="inline-block"
@@ -31,6 +40,6 @@ export const LearnMoreLink: React.FC<LearnMoreLinkProps> = ({
           />
         </svg>
       </motion.span>
-    </div>
+    </Link>
   );
 };
