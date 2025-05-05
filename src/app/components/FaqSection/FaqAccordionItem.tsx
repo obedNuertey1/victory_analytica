@@ -3,6 +3,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 
+interface FaqAccordionItemProps {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onClick: () => void;
+}
+
 export const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({
   question,
   answer,

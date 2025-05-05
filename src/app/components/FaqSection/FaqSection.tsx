@@ -6,21 +6,28 @@ import { FaqAccordionItem } from "./FaqAccordionItem";
 
 const faqItems = [
   {
-    question: "1. What industries do you serve?",
-    answer:
-      "We serve clients across industries, including technology, healthcare, finance, retail, and more.",
+    question: "What's included in your Silver Model service?",
+    answer: "Our Silver Model provides essential U.S. market entry support including business address establishment, bank account setup, and California orientation tour. Perfect for businesses needing basic representation and networking opportunities."
   },
   {
-    question: "Can your solutions scale with my business?",
-    answer: "Absolutely. Our modular platform is designed to grow with you—whether you’re adding a few dozen users or expanding across continents. We employ micro‑services architecture and elastic cloud infrastructure so that performance remains seamless, costs stay optimized, and new features can be rolled out without downtime.",
+    question: "How does the Platinum Model ensure tax compliance?",
+    answer: "The Platinum Model includes full EIN/ITIN assistance, introduces certified accountants for tax filing, and provides ongoing compliance monitoring. We implement AI-driven audits to ensure 100% regulatory adherence across all 50 states."
   },
   {
-    question: "How do you ensure security and reliability?",
-    answer: "Security and uptime are non‑negotiable at ABC. We adhere to ISO 27001 and SOC 2 Type II standards, conduct quarterly penetration tests, and maintain 24/7 monitoring with automated failover across multiple data centers. All customer data is encrypted both at rest and in transit, and we run daily backups with multi‑region replication to guarantee business continuity.",
+    question: "What security measures protect client data?",
+    answer: "We employ military-grade encryption, biometric access controls, and blockchain-based audit trails. Our Security Operations Center provides 24/7 monitoring, ensuring compliance with GDPR, CCPA, and international data protection standards."
   },
   {
-    question: "Do you offer dedicated teams for ongoing projects?",
-    answer: "Yes. For clients requiring sustained collaboration, we assemble dedicated squads—each including a project manager, senior engineers, QA specialists, and business analysts. These teams integrate with your processes (Agile, DevOps, or hybrid), provide weekly progress reporting, and can be scaled up or down based on evolving priorities.",
+    question: "Can you help with workforce relocation?",
+    answer: "Our Elite Model includes full immigration support - we secure L-1, E-2, and EB-5 visas with 95% success rate, handle spouse work permits, and provide cultural integration training for smooth team transitions."
+  },
+  {
+    question: "How do you streamline asset acquisition?",
+    answer: "Our Diamond Model offers turnkey solutions: vendor vetting, lease negotiations, and AI-powered market analysis. We coordinate everything from office furniture to industrial equipment, typically saving clients 30% on setup costs."
+  },
+  {
+    question: "What makes your business registration different?",
+    answer: "We combine legal expertise with data analytics to optimize entity structure (LLC vs C-Corp), file patents pre-emptively, and establish trademark protection - all within 72 hours for most jurisdictions."
   }
 ];
 
@@ -68,11 +75,10 @@ export default function FaqSection() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              FAQs
+              Expert Guidance
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              Find clear, concise answers about our services, processes, and how
-              we help businesses achieve their goals.
+            Your roadmap to secure global expansion - combining legal precision with cutting-edge security solutions
             </p>
           </motion.header>
 
