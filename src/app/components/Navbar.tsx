@@ -22,8 +22,8 @@ const NavItem = ({
     href={href}
     onClick={onClick}
     className={`relative px-4 py-2 not-lg:text-2xl font-medium transition-all duration-300 ${isActive
-        ? 'text-blue-600'
-        : 'text-gray-600 hover:text-gray-900'
+      ? 'text-blue-600'
+      : 'text-gray-600 hover:text-gray-900'
       }`}
     aria-current={isActive ? "page" : undefined}
   >
@@ -109,8 +109,13 @@ export const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="flex-1 lg:hidden">
             <div className="flex items-center gap-1.5">
-              <div className="w-6 h-6 rounded-sm" />
-              <span className="text-xl">Victory Analytica</span>
+              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">VA</span>
+              </div>
+              <span>
+                <span className="block text-[1rem]">Victory Analytica</span>
+                <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
+              </span>
             </div>
           </div>
 
@@ -142,7 +147,7 @@ export const Navbar = () => {
           <div className="hidden lg:flex flex-1 justify-between items-center max-w-7xl mx-auto px-8">
             {/* Branding */}
             <motion.div
-              className="flex items-center gap-3"
+              className="flex items-center gap-1.5"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -150,7 +155,10 @@ export const Navbar = () => {
               <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">VA</span>
               </div>
-              <span className="text-xl font-semibold text-gray-900">Victory Analytica & Security LLC</span>
+              <span>
+                <span className="block text-[1rem]">Victory Analytica</span>
+                <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
+              </span>
             </motion.div>
 
             {/* Navigation Links */}
@@ -202,7 +210,7 @@ export const Navbar = () => {
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-200/30 rounded-full blur-xl" />
 
           {/* Branding Section */}
-          <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-100">
+          {/* <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-100">
             <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">VA</span>
             </div>
@@ -210,6 +218,15 @@ export const Navbar = () => {
               <h2 className="text-xl font-bold text-gray-900">Victory Analytica</h2>
               <p className="text-sm text-gray-500">Innovating Solutions</p>
             </div>
+          </div> */}
+          <div className="flex items-center gap-1.5 mb-8 border-b border-gray-100">
+              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">VA</span>
+              </div>
+              <span>
+                <span className="block text-[1rem]">Victory Analytica</span>
+                <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
+              </span>
           </div>
 
           {/* Navigation Menu */}
