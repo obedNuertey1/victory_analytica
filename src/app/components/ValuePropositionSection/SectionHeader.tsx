@@ -9,8 +9,8 @@ interface SectionHeaderProps<S>{
 }
 
 export const SectionHeader: React.FC<SectionHeaderProps<string>> = ({
-  title,
-  subtitle,
+  title = "Global Expansion Frameworks",
+  subtitle = "Our compliance-driven approach ensures seamless market entry and sustainable growth",
 }) => {
   return (
     <motion.header

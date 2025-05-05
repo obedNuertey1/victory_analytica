@@ -7,30 +7,25 @@ import { SectionHeader } from "./SectionHeader";
 
 const valueCards = [
   {
-    title: "Innovation",
-    description: "Pioneering solutions tailored to your unique needs.",
-    backgroundSrc:
-      "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
+    title: "Compliance Mastery",
+    description: "End-to-end tax identification (ITIN/EIN) and financial compliance solutions with certified professionals",
+    backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
+    imageSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/fae8760b37af94f368d72e1ecead12fda6441ed2?placeholderIfAbsent=true",
   },
   {
-    title: "Reliability",
-    description: "Delivering on promises with precision and excellence.",
-    backgroundSrc:
-      "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
+    title: "Strategic Market Entry",
+    description: "Complete U.S. business setup including registration, banking, and California State ID assistance",
+    backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
   },
   {
-    title: "Collaboration",
-    description: "Partnering with clients to achieve shared success.",
-    backgroundSrc:
-      "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/fae8760b37af94f368d72e1ecead12fda6441ed2?placeholderIfAbsent=true",
+    title: "Asset Optimization",
+    description: "Full-spectrum asset management from vendor sourcing to property acquisition under Elite Model guidance",
+    backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
   },
   {
-    title: "Integrity",
-    description: "Building trust through transparency and accountability.",
-    backgroundSrc:
-      "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
+    title: "Global Workforce Solutions",
+    description: "Comprehensive legal services including work permit processing and international team deployment",
+    backgroundSrc: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/25cd7db634a7059ef447353198ce2580950cf14c?placeholderIfAbsent=true",
   },
 ];
 
@@ -48,7 +43,6 @@ export const ValuePropositionSection: React.FC = () => {
     <motion.section
       ref={ref}
       className="relative py-24 md:py-32 overflow-hidden"
-      style={{ opacity }}
     >
       {/* Animated Background */}
       {/* <motion.div 
