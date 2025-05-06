@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { ValueCard } from "./ValueCard";
 import { SectionHeader } from "./SectionHeader";
+import Image from "next/image";
 
 const valueCards = [
   {
@@ -40,7 +41,7 @@ export const ValuePropositionSection: React.FC = () => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
+  // const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
 
   return (
     <motion.section
@@ -64,7 +65,7 @@ export const ValuePropositionSection: React.FC = () => {
         className="absolute inset-0 -z-10"
         style={{ y }}
       >
-        <img
+        <Image
           src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/77795b531a9fdb993763ef213660c950c3884fce?placeholderIfAbsent=true"
           className="object-cover w-full h-full rotate-180"
           alt="Decorative background"

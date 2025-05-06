@@ -2,11 +2,12 @@
 "use client";
 import { motion } from "framer-motion";
 import * as React from "react";
+import Image from "next/image";
 
 interface ValueCardProps<S>{
   title?: S;
   description?: S;
-  imageSrc?: S;
+  imageSrc: string;
   backgroundSrc?: S;
 }
 
@@ -21,11 +22,15 @@ export const ValueCard: React.FC<ValueCardProps<string>> = ({
       className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full"
       whileHover={{ y: -5 }}
     >
-      <img
+      <div className="absolute inset-0 w-full h-full">
+      <Image
+        // @ts-expect-error something went wrong here
         src={backgroundSrc}
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
+        fill
         alt="Card background"
-      />
+        className="object-cover opacity-20"
+        />
+      </div>
       <div className="relative flex flex-col items-center justify-center p-8 bg-white/90 backdrop-blur-sm h-full">
         {imageSrc && (
           <motion.img

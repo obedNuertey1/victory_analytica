@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Timeline } from "./Timeline";
+import Image from "next/image";
 
 const StorySection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -12,7 +13,6 @@ const StorySection: React.FC = () => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
 
   return (
     <motion.section
@@ -23,7 +23,7 @@ const StorySection: React.FC = () => {
         className="absolute inset-0 -z-10"
         style={{ y }}
       >
-        <img
+        <Image
           src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/77795b531a9fdb993763ef213660c950c3884fce?placeholderIfAbsent=true"
           className="object-cover w-full h-full rotate-180"
           alt="Decorative background"

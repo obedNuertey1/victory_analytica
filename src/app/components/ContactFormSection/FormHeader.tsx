@@ -1,6 +1,5 @@
 // src/app/components/ContactFormSection/FormHeader.tsx
 import React from "react";
-import { motion } from "framer-motion";
 
 const FormHeader = () => {
   return (

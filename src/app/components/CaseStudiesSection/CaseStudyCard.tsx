@@ -3,6 +3,7 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 interface CaseStudyCardProps {
   imageUrl: string;
@@ -31,7 +32,7 @@ export const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
     >
       <div className="p-6 lg:p-8">
         <div className="mb-6 w-full aspect-square overflow-hidden rounded-xl">
-          <img
+          <Image
             src={imageUrl}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             alt={`${title} illustration`}

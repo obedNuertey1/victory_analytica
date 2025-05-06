@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FaqAccordionItem } from "./FaqAccordionItem";
+import Image from "next/image";
 
 const faqItems = [
   {
@@ -54,7 +55,7 @@ export default function FaqSection() {
         style={{ y }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 to-white" />
-        <img
+        <Image
           src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/1d65cff1687b3a29d518910b2f84e83ceb9f0058?placeholderIfAbsent=true"
           className="object-cover w-full h-full opacity-10"
           alt="Decorative background"

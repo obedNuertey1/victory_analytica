@@ -1,6 +1,7 @@
 // src/app/components/ExpertiseSection/ServiceCard.tsx
 import { motion } from "framer-motion";
 import { LearnMoreLink } from "./LearnMoreLink";
+import Image from "next/image";
 
 interface ServiceCardProps {
   backgroundImage: string;
@@ -22,7 +23,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
       whileHover={{ y: -5 }}
     >
-      <img
+      <Image
         src={backgroundImage}
         alt=""
         className="absolute inset-0 w-full h-full object-cover opacity-20"

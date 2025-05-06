@@ -8,7 +8,7 @@ interface ConsultationButtonProps {
     className?: string;
 }
 
-export default function ConsultationButton({ onClick, className = "" }: ConsultationButtonProps) {
+export default function ConsultationButton({ className = "" }: ConsultationButtonProps) {
     return (
         <>
             <link

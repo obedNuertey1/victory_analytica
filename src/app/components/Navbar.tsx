@@ -1,6 +1,6 @@
 // src\app\components\Navbar.tsx
 "use client";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from "framer-motion";

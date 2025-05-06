@@ -1,7 +1,6 @@
 // src\app\components\WhyChooseSection\FeatureCard.tsx
 "use client";
 import { motion } from "framer-motion";
-import { BackgroundImage } from "./BackgroundImage";
 
 interface FeatureCardProps<S>{
   backgroundSrc: S;
@@ -13,7 +12,6 @@ interface FeatureCardProps<S>{
 }
 
 export const FeatureCard: React.FC<FeatureCardProps<string>> = ({
-  backgroundSrc,
   imageSrc,
   title,
   description,

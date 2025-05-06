@@ -24,10 +24,21 @@ export default function ServiceTable() {
     useEffect(() => {
         if (rowRef.current && highlightedRow >= 0) {
             // Smooth scroll to the highlighted row with offset
-            rowRef.current.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
+            // rowRef.current.scrollIntoView({
+            //     behavior: 'smooth',
+            //     block: 'center'
+            // });
+
+            try {
+                rowRef.current.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center'
+                });
+              } catch (e) {
+                // Fallback for browsers that don't support smooth scroll
+                console.log(e);
+                rowRef.current.scrollIntoView();
+              }
 
             // Add temporary highlight animation
             rowRef.current.classList.add('highlight-pulse');

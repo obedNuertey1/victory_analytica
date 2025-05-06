@@ -2,8 +2,14 @@ import React from 'react';
 import HeroSectionPartial from "@/app/components/HeroSection/HeroSectionPartial";
 import ContactSection from "@/app/components/ContactSection/ContactSection";
 import FaqSection from '@/app/components/FaqSection/FaqSection';
+import { metadata } from "../layout";
 
 function page() {
+    metadata.title = "FAQs | Victory Analytica & Security LLC";
+    metadata.description = "Frequently Asked Questions";
+    metadata.icons = {
+        icon: "/favicon.ico",
+      }
     return (
         <div className="flex flex-col self-stretch">
             <HeroSectionPartial

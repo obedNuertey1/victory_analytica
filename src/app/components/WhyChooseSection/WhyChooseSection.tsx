@@ -2,8 +2,8 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { BackgroundImage } from "./BackgroundImage";
 import { FeatureCard } from "./FeatureCard";
+import Image from "next/image";
 
 export const WhyChooseSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,7 +25,7 @@ export const WhyChooseSection: React.FC = () => {
         className="absolute inset-0 -z-10"
         style={{ y }}
       >
-        <img
+        <Image
           src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/77795b531a9fdb993763ef213660c950c3884fce?placeholderIfAbsent=true"
           className="object-center w-full h-full"
           alt="Security and global business concept"

@@ -1,6 +1,7 @@
 // src\app\components\JoinUsSection\FeatureCard.tsx
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 interface FeatureCardProps {
   iconSrc: string;
@@ -23,7 +24,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
     >
       <div className="flex flex-col items-center text-center">
         <div className="mb-6 w-20 h-20 flex items-center justify-center">
-          <img
+          <Image
             src={iconSrc}
             className="object-contain w-full h-full"
             alt={title}

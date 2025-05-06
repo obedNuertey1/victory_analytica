@@ -23,7 +23,7 @@ export const SuccessStoriesHeader: React.FC = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        Discover how we've enabled secure international expansion and optimized operations 
+        Discover how we&apos;ve enabled secure international expansion and optimized operations 
         for businesses worldwide through strategic consulting and compliance excellence.
       </motion.p>
     </motion.header>

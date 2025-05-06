@@ -1,5 +1,6 @@
 // src\app\components\WhyChooseSection\BackgroundImage.tsx
 import React from "react";
+import Image from "next/image";
 
 interface BackgroundImageProps {
   src: string;
@@ -14,7 +15,7 @@ export const BackgroundImage: React.FC<BackgroundImageProps> = ({
 }) => {
   return (
     <div className={`relative ${className}`}>
-      <img
+      <Image
         src={src}
         alt=""
         className="object-cover absolute inset-0 size-full -z-10"  // Added -z-10

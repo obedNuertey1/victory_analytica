@@ -4,8 +4,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { StatisticItem } from "./StatisticItem";
 import { UptimeStatistic } from "./UptimeStatistic";
-import { ServiceLevelCard } from "./ServiceLevelCard";
-import { KeyMetric } from "./KeyMetrics";
 
 export const ImpactSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -18,8 +16,7 @@ export const ImpactSection: React.FC = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0.5]);
 
   // Calculate circle circumference
-  const radius = 45;
-  const circumference = 2 * Math.PI * radius;
+  // const radius = 45;
 
   return (
     <motion.section

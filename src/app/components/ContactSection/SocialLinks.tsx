@@ -1,6 +1,7 @@
 // src\app\components\ContactSection\SocialLinks.tsx
 import { motion } from "framer-motion";
 import * as React from "react";
+import Image from "next/image";
 
 export const SocialLinks: React.FC = () => {
   const socialIcons = [
@@ -32,7 +33,7 @@ export const SocialLinks: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <img
+          <Image
             src={icon.src}
             alt={icon.alt}
             className="w-6 h-6 md:w-8 md:h-8"
