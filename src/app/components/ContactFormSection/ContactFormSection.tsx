@@ -1,6 +1,6 @@
 // src/app/components/ContactFormSection/ContactFormSection.tsx
 "use client";
-import * as React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import FormHeader from "./FormHeader";
@@ -8,6 +8,7 @@ import FormInput from "./FormInput";
 import FormDropdown from "./FormDropdown";
 import FormTextarea from "./FormTextarea";
 import SubmitButton from "./SubmitButton";
+import "./ContactFormSection.css";
 
 const services = [
   {
@@ -78,6 +79,28 @@ function ContactFormSection() {
     threshold: 0.1
   });
 
+  const formRef = React.useRef<HTMLElement>(null);
+
+  // Scroll handling
+  useEffect(() => {
+    if (window.location.hash === '#contact-form') {
+      formRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+
+  }, []);
+
+  const setRefs = (el: HTMLElement | null) => {
+    if (el) {
+      // Set for inView observer
+      ref(el);
+      // Set for our scroll ref
+      formRef.current = el;
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -96,8 +119,9 @@ function ContactFormSection() {
 
   return (
     <motion.main
-      ref={ref}
-      className="flex flex-col items-center py-8 px-4 sm:py-12 lg:py-16 bg-gradient-to-br from-blue-50 to-purple-50"
+      ref={setRefs}
+      id="contact-form"
+      className={`flex flex-col items-center py-8 px-4 sm:py-12 lg:py-16 bg-gradient-to-br from-blue-50 to-purple-50 scroll-mt-16`}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -134,7 +158,7 @@ function ContactFormSection() {
               label="Email address (*)"
               type="text"
               placeholder="e.g michael@globalenterprises.com"
-              aria-label="Email address" 
+              aria-label="Email address"
             />
           </motion.div>
         </motion.section>
@@ -169,10 +193,10 @@ function ContactFormSection() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-        <FormTextarea 
-            label="Message (*)" 
-            placeholder="Enter your message here..." 
-            aria-label="Strategy Details" 
+          <FormTextarea
+            label="Message (*)"
+            placeholder="Enter your message here..."
+            aria-label="Strategy Details"
           />
         </motion.div>
 

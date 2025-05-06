@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 
 interface ConsultationButtonProps {
     onClick?: () => void;
@@ -14,8 +15,8 @@ export default function ConsultationButton({ onClick, className = "" }: Consulta
                 rel="stylesheet"
                 href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
             />
-            <button
-                onClick={onClick}
+            <Link
+                href="/contact#contact-form"
                 className={`
                     flex justify-center items-center
                     rounded border-blue-500 border-solid
@@ -35,7 +36,7 @@ export default function ConsultationButton({ onClick, className = "" }: Consulta
                     <span>Get a consultation</span>
                     <i className="ti ti-arrow-right" aria-hidden="true" />
                 </div>
-            </button>
+            </Link>
         </>
     );
 }
