@@ -17,12 +17,22 @@ export const FooterContent: React.FC = () => {
           whileInView={{ x: 0 }}
         >
           <div className="flex items-center gap-1.5">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
+              {/* <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">VA</span>
               </div>
               <span>
                 <span className="block text-2xl">Victory Analytica</span>
                 <span className='block -mt-2 text-2xl'>& Security LLC</span>
+              </span> */}
+              <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-2xl text-center m-auto">
+                    <span className='inline-block transform text-blue-500 translate-x-[2.35px] -scale-x-150 z-10' >V</span>
+                    <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
+                </span>
+              </div>
+              <span>
+                <span className="block text-2xl font-bold">Victory Analytica</span>
+                <span className='block -mt-2 text-2xl tracking-[3px]'>& Security LLC</span>
               </span>
             </div>
         </motion.div>
