@@ -3,6 +3,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface CTAButtonProps {
   text: string;
@@ -11,18 +12,20 @@ interface CTAButtonProps {
 
 export const CTAButton: React.FC<CTAButtonProps> = ({ text, onClick }) => {
   return (
-    <motion.button
+    <motion.div
       onClick={onClick}
       className="relative overflow-hidden px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
+      <Link  href="/case-studies/all">
       <span className="relative z-10 flex items-center gap-3">
         {text}
         <span className="transition-transform duration-300 group-hover:translate-x-1">
           →
         </span>
       </span>
-    </motion.button>
+      </Link>
+    </motion.div>
   );
 };
