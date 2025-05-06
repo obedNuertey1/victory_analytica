@@ -36,6 +36,8 @@ export const SocialLinks: React.FC = () => {
           <Image
             src={icon.src}
             alt={icon.alt}
+            width={32}
+            height={32}
             className="w-6 h-6 md:w-8 md:h-8"
           />
         </motion.a>

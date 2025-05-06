@@ -27,6 +27,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           <Image
             src={iconSrc}
             className="object-contain w-full h-full"
+            fill
             alt={title}
           />
         </div>

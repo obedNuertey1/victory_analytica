@@ -31,11 +31,22 @@ export const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
       whileHover={{ y: -5 }}
     >
       <div className="p-6 lg:p-8">
-        <div className="mb-6 w-full aspect-square overflow-hidden rounded-xl">
-          <Image
+        {/* <div className="mb-6 w-full aspect-square overflow-hidden rounded-xl">
+          <img
             src={imageUrl}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             alt={`${title} illustration`}
+          />
+        </div> */}
+        <div className="mb-6 w-full aspect-square overflow-hidden rounded-xl relative">
+          <Image
+            src={imageUrl}
+            fill
+            alt={`${title} illustration`}
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
           />
         </div>
 

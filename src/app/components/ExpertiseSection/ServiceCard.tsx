@@ -25,7 +25,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       <Image
         src={backgroundImage}
-        alt=""
+        alt="Service card image"
+        fill
         className="absolute inset-0 w-full h-full object-cover opacity-20"
       />
       

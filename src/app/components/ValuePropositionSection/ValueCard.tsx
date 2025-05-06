@@ -22,15 +22,15 @@ export const ValueCard: React.FC<ValueCardProps<string>> = ({
       className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-full"
       whileHover={{ y: -5 }}
     >
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full"> */}
       <Image
         // @ts-expect-error something went wrong here
         src={backgroundSrc}
         fill
         alt="Card background"
-        className="object-cover opacity-20"
+        className="object-cover opacity-20 absolute inset-0 w-full h-full"
         />
-      </div>
+      {/* </div> */}
       <div className="relative flex flex-col items-center justify-center p-8 bg-white/90 backdrop-blur-sm h-full">
         {imageSrc && (
           <motion.img

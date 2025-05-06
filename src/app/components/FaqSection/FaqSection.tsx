@@ -58,6 +58,7 @@ export default function FaqSection() {
         <Image
           src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/1d65cff1687b3a29d518910b2f84e83ceb9f0058?placeholderIfAbsent=true"
           className="object-cover w-full h-full opacity-10"
+          fill
           alt="Decorative background"
         />
       </motion.div>
