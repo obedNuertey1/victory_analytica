@@ -140,17 +140,17 @@ export default function ServiceTable() {
     ];
 
     return (
-        <div className="overflow-x-auto rounded-lg border border-base-200 max-w-[90rem] m-auto">
-            <table className="table w-full">
+        <div className="overflow-x-auto rounded-lg border border-base-200 w-full m-auto">
+            <table className="table table-xs md:table w-full">
                 <thead className="bg-base-200">
                     <tr>
-                        <th className="text-lg font-bold">Service Feature</th>
-                        <th className="bg-silver">Silver</th>
-                        <th className="bg-gold">Gold</th>
-                        <th className="bg-platinum">Platinum (2W)</th>
-                        <th className="bg-platinum">Platinum (3W)</th>
-                        <th className="bg-diamond">Diamond</th>
-                        <th className="bg-elite">Elite</th>
+                        <th className="text-sm md:text-lg font-bold whitespace-normal">Service Feature</th>
+                        <th className="bg-silver text-sm md:text-base whitespace-normal px-2">Silver</th>
+                        <th className="bg-gold text-sm md:text-base whitespace-normal px-2">Gold</th>
+                        <th className="bg-platinum text-sm md:text-base whitespace-normal px-2">Platinum (2W)</th>
+                        <th className="bg-platinum text-sm md:text-base whitespace-normal px-2">Platinum (3W)</th>
+                        <th className="bg-diamond text-sm md:text-base whitespace-normal px-2">Diamond</th>
+                        <th className="bg-elite text-sm md:text-base whitespace-normal px-2">Elite</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -161,17 +161,54 @@ export default function ServiceTable() {
                             ref={index === highlightedRow ? rowRef : null}
                             id={`row-${index}`}
                         >
-                            <td className="font-semibold">{feature.feature}</td>
-                            <td>{feature.silver}</td>
-                            <td>{feature.gold}</td>
-                            <td>{feature.platinum2}</td>
-                            <td>{feature.platinum3}</td>
-                            <td>{feature.diamond}</td>
-                            <td>{feature.elite}</td>
+                            <td className="font-semibold whitespace-normal text-sm md:text-base px-2 py-1">
+                                {feature.feature}
+                            </td>
+                            {[feature.silver, feature.gold, feature.platinum2, feature.platinum3, feature.diamond, feature.elite].map((value, i) => (
+                                <td key={i} className="whitespace-normal text-sm md:text-base px-2 py-1">
+                                    {value}
+                                </td>
+                            ))}
                         </tr>
                     ))}
                 </tbody>
             </table>
         </div>
     );
+
+    // return (
+    //     <div className="overflow-x-auto rounded-lg border border-base-200 max-w-[90rem] m-auto">
+    //         <table className="table w-full">
+    //             <thead className="bg-base-200">
+    //                 <tr>
+    //                     <th className="text-lg font-bold">Service Feature</th>
+    //                     <th className="bg-silver">Silver</th>
+    //                     <th className="bg-gold">Gold</th>
+    //                     <th className="bg-platinum">Platinum (2W)</th>
+    //                     <th className="bg-platinum">Platinum (3W)</th>
+    //                     <th className="bg-diamond">Diamond</th>
+    //                     <th className="bg-elite">Elite</th>
+    //                 </tr>
+    //             </thead>
+    //             <tbody>
+    //                 {serviceFeatures.map((feature, index) => (
+    //                     <tr
+    //                         key={feature.feature}
+    //                         className={`${highlightedRow === index ? 'bg-primary/20 transition-colors' : ''} scroll-mt-16`}
+    //                         ref={index === highlightedRow ? rowRef : null}
+    //                         id={`row-${index}`}
+    //                     >
+    //                         <td className="font-semibold">{feature.feature}</td>
+    //                         <td>{feature.silver}</td>
+    //                         <td>{feature.gold}</td>
+    //                         <td>{feature.platinum2}</td>
+    //                         <td>{feature.platinum3}</td>
+    //                         <td>{feature.diamond}</td>
+    //                         <td>{feature.elite}</td>
+    //                     </tr>
+    //                 ))}
+    //             </tbody>
+    //         </table>
+    //     </div>
+    // );
 }
