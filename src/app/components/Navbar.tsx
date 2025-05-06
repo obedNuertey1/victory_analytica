@@ -109,12 +109,22 @@ export const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="flex-1 lg:hidden">
             <div className="flex items-center gap-1.5">
-              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+              {/* <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">VA</span>
               </div>
               <span>
                 <span className="block text-[1rem]">Victory Analytica</span>
                 <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
+              </span> */}
+              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg text-center m-auto">
+                    <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
+                    <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
+                </span>
+              </div>
+              <span>
+                <span className="block text-[1rem] font-bold">Victory Analytica</span>
+                <span className='block -mt-1.5 text-[1rem] tracking-[2px]'>& Security LLC</span>
               </span>
             </div>
           </div>
@@ -153,11 +163,14 @@ export const Navbar = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">VA</span>
+                <span className="text-white font-bold text-lg text-center m-auto">
+                    <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
+                    <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
+                </span>
               </div>
               <span>
-                <span className="block text-[1rem]">Victory Analytica</span>
-                <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
+                <span className="block text-[1rem] font-bold">Victory Analytica</span>
+                <span className='block -mt-1.5 text-[1rem] tracking-[2px]'>& Security LLC</span>
               </span>
             </motion.div>
 
@@ -220,12 +233,22 @@ export const Navbar = () => {
             </div>
           </div> */}
           <div className="flex items-center gap-1.5 mb-8 border-b border-gray-100">
-              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+              {/* <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">VA</span>
               </div>
               <span>
                 <span className="block text-[1rem]">Victory Analytica</span>
                 <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
+              </span> */}
+              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg text-center m-auto">
+                    <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
+                    <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
+                </span>
+              </div>
+              <span>
+                <span className="block text-[1rem] font-bold">Victory Analytica</span>
+                <span className='block -mt-1.5 text-[1rem] tracking-[2px]'>& Security LLC</span>
               </span>
           </div>
 
