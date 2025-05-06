@@ -1,6 +1,7 @@
 // src/app/components/HeroSection/Hero.tsx
 import * as React from "react";
 import ConsultationButton from "../ConsultationButton";
+import Link from "next/link";
 
 interface HeroProps<S>{
   firstBlockText?: S;
@@ -49,9 +50,9 @@ export const Hero: React.FC<HeroProps<string>> = ({
 
         <div className="mt-6 md:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <ConsultationButton className="w-full sm:w-48 lg:w-56 flex-shrink-0" />
-          <a href="#" className="text-blue-600 hover:text-blue-800 text-lg font-semibold underline">
+          <Link href="/case-studies" className="text-blue-600 hover:text-blue-800 text-lg font-semibold underline">
             View Case Studies
-          </a>
+          </Link>
         </div>
       </div>
     </section>
