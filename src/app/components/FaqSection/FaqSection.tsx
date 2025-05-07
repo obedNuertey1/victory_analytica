@@ -41,13 +41,13 @@ export default function FaqSection() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-50, 50]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
+  // const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
 
   return (
     <motion.section
       ref={ref}
       className="relative py-24 md:py-32 lg:py-48 overflow-hidden"
-      style={{ opacity }}
+      // style={{ opacity }}
     >
       {/* Animated Background */}
       <motion.div 
