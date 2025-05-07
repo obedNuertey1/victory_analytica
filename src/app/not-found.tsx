@@ -33,7 +33,7 @@ export default function NotFound() {
                             Page Not Found
                         </h2>
                         <p className="text-gray-600 text-base max-w-xs mx-auto">
-                            Oops! You've entered digital space. Return to
+                            Oops! You&apos;ve entered digital space. Return to
                             <span className="font-medium text-blue-600"> safety</span>.
                         </p>
                     </motion.div>
