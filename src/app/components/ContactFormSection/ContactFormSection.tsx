@@ -8,6 +8,7 @@ import FormInput from "./FormInput";
 import FormDropdown from "./FormDropdown";
 import FormTextarea from "./FormTextarea";
 import SubmitButton from "./SubmitButton";
+import {toast, Toaster} from "react-hot-toast";
 import "./ContactFormSection.css";
 
 const services = [
@@ -79,6 +80,16 @@ function ContactFormSection() {
     threshold: 0.1
   });
 
+  const [contactForm, setContactForm] = React.useState<any>({
+    fullName: "",
+    companyName: "",
+    emailAddress: "",
+    serviceTier: "",
+    investmentRange: "",
+    priorityComplianceNeeds: "",
+    emailMessage: ""
+  })
+
   const formRef = React.useRef<HTMLElement>(null);
 
   // Scroll handling
@@ -117,6 +128,25 @@ function ContactFormSection() {
     visible: { y: 0, opacity: 1 }
   };
 
+  const handleContactForm = async (e:any)=>{
+    e.preventDefault();
+    console.log({...contactForm});
+    try{
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json" 
+        },
+        body: JSON.stringify(contactForm)
+      });
+      if (!res.ok){throw new Error("Failed to post message")};
+      toast.success("Message sent successfully");
+    }catch(e){
+      toast.error("Failed to send message");
+      console.log(e);
+    }
+  }
+
   return (
     <motion.main
       ref={setRefs}
@@ -129,7 +159,7 @@ function ContactFormSection() {
       <motion.form
         className="w-full max-w-[600px] space-y-6"
         variants={containerVariants}
-        onSubmit={(e) => e.preventDefault()}
+        onSubmit={handleContactForm}
       >
         <FormHeader />
 
@@ -143,6 +173,14 @@ function ContactFormSection() {
               type="text"
               placeholder="e.g Michael Dwayne"
               aria-label="Full Name"
+              onChange={(e)=>{
+                setContactForm((prev:any)=>({
+                  ...prev,
+                  fullName: e.target.value
+                }))
+              }}
+              value={contactForm.fullName}
+              required={true}
             />
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -151,6 +189,14 @@ function ContactFormSection() {
               type="text"
               placeholder="e.g Global Enterprises Inc"
               aria-label="Company Name"
+              onChange={(e)=>{
+                setContactForm((prev:any)=>({
+                  ...prev,
+                  companyName: e.target.value
+                }))
+              }}
+              value={contactForm.companyName}
+              required={false}
             />
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -159,6 +205,14 @@ function ContactFormSection() {
               type="text"
               placeholder="e.g michael@globalenterprises.com"
               aria-label="Email address"
+              onChange={(e)=>{
+                setContactForm((prev:any)=>({
+                  ...prev,
+                  emailAddress: e.target.value
+                }))
+              }}
+              value={contactForm.emailAddress}
+              required={true}
             />
           </motion.div>
         </motion.section>
@@ -171,6 +225,7 @@ function ContactFormSection() {
             <FormDropdown
               label="Service Tier (optional)"
               options={services.map(service => service.title)}
+              setContactForm={setContactForm}
             />
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -179,6 +234,13 @@ function ContactFormSection() {
               type="text"
               placeholder="$5k - $100k+"
               aria-label="Investment Range"
+              onChange={(e)=>{
+                setContactForm((prev:any)=>({
+                  ...prev,
+                  investmentRange: e.target.value
+                }))
+              }}
+              value={contactForm.investmentRange}
             />
           </motion.div>
         </motion.section>
@@ -189,6 +251,13 @@ function ContactFormSection() {
             type="text"
             placeholder="Tax, Workforce, Asset Management"
             aria-label="Compliance Needs"
+            onChange={(e)=>{
+              setContactForm((prev:any)=>({
+                ...prev,
+                priorityComplianceNeeds: e.target.value
+              }))
+            }}
+            value={contactForm.priorityComplianceNeeds}
           />
         </motion.div>
 
@@ -197,6 +266,14 @@ function ContactFormSection() {
             label="Message (*)"
             placeholder="Enter your message here..."
             aria-label="Strategy Details"
+            onChange={(e)=>{
+              setContactForm((prev:any)=>({
+                ...prev,
+                emailMessage: e.target.value
+              }))
+            }}
+            value={contactForm.emailMessage}
+            required={true}
           />
         </motion.div>
 
@@ -207,6 +284,7 @@ function ContactFormSection() {
           <SubmitButton />
         </motion.div>
       </motion.form>
+      <Toaster />
     </motion.main>
   );
 }

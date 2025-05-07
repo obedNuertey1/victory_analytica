@@ -8,6 +8,9 @@ interface FormInputProps {
   type: string;
   placeholder: string;
   "aria-label": string;
+  value?: any;
+  onChange?: (e:any)=>void;
+  required?: boolean;
 }
 
 const FormInput: React.FC<FormInputProps> = ({
@@ -15,6 +18,9 @@ const FormInput: React.FC<FormInputProps> = ({
   type,
   placeholder,
   "aria-label": ariaLabel,
+  onChange = ()=>{},
+  value = "",
+  required = false
 }) => {
   return (
     <div className="flex flex-col gap-1.5">
@@ -31,6 +37,9 @@ const FormInput: React.FC<FormInputProps> = ({
         placeholder={placeholder}
         aria-label={ariaLabel}
         whileFocus={{ scale: 1.02 }}
+        onChange={onChange}
+        value={value}
+        required={required}
       />
     </div>
   );

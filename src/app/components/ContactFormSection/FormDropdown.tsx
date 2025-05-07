@@ -6,11 +6,16 @@ import { motion } from "framer-motion";
 interface FormDropdownProps {
   label: string;
   options: string[];
+  setContactForm?: any;
 }
 
-const FormDropdown: React.FC<FormDropdownProps> = ({ label, options }) => {
+const FormDropdown: React.FC<FormDropdownProps> = ({ label, options, setContactForm }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  
+  React.useEffect(()=>{
+    setContactForm((prev:any)=>({...prev, serviceTier: selectedOption}));
+  }, [selectedOption]);
 
   return (
     <div className="flex flex-col gap-2">

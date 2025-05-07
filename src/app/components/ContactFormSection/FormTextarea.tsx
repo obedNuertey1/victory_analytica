@@ -7,12 +7,18 @@ interface FormTextareaProps {
   label: string;
   placeholder: string;
   "aria-label": string;
+  value?: any;
+  onChange?: (e:any)=>void;
+  required?: boolean;
 }
 
 const FormTextarea: React.FC<FormTextareaProps> = ({
   label,
   placeholder,
   "aria-label": ariaLabel,
+  onChange = ()=>{},
+  value = "",
+  required = false
 }) => {
   return (
     <div className="flex flex-col gap-1.5">
@@ -28,6 +34,9 @@ const FormTextarea: React.FC<FormTextareaProps> = ({
         placeholder={placeholder}
         aria-label={ariaLabel}
         whileFocus={{ scale: 1.02 }}
+        value={value}
+        onChange={onChange}
+        required={required}
       />
     </div>
   );
