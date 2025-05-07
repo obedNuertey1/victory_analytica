@@ -15,7 +15,7 @@ function HeroSection() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-h-[calc(100vh-4rem)] overflow-hidden">
           <Hero
             firstBlockText={"Victory Analytica"}
-            secondBlockText={"& Security LLC"}
+            secondBlockText={<span className="tracking-[3.4px] md:tracking-[5.5px] lg:tracking-[9px]">& Security LLC</span>}
             // secondBlockText={"Empowering Global Enterprises"}
             leftParagraphText={
               "At Victory Analytica & Security LLC, our mission is to empower businesses globally by providing expert consulting in international business setup, strategic planning, and investment opportunities."

@@ -13,7 +13,8 @@ function page() {
     return (
         <div className="flex flex-col self-stretch">
             <HeroSectionPartial
-                firstBlockText={"Frequently Asked Questions"}
+                firstBlockText={"Frequently Asked"}
+                secondBlockText={"Questions"}
                 leftParagraphText={"Your questions, our answers"}
                 rightParagraphText={
                     "Find expert guidance on international business setup, tiered service models (Silver to Elite), and compliance architecture. Need tailored security solutions? Request a consultation below."

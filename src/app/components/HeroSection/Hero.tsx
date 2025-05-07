@@ -5,7 +5,7 @@ import Link from "next/link";
 
 interface HeroProps<S>{
   firstBlockText?: S;
-  secondBlockText?: S;
+  secondBlockText?: S | React.ReactNode;
   leftParagraphText?: S;
   rightParagraphText?: S;
 }
@@ -17,12 +17,12 @@ export const Hero: React.FC<HeroProps<string>> = ({
   rightParagraphText
 }) => {
   return (
-    <section className="text-gray-900 lg:-mt-6">
-      <h1 className="text-4xl md:text-6xl lg:text-8xl xl:text-9xl leading-[1.2] md:leading-[1.1] font-bold">
+    <section className="text-gray-900 lg:-mt-6 mx-auto max-w-7xl">
+      <h1 className="text-4xl md:text-6xl lg:text-8xl xl:text-8xl leading-[1.2] md:leading-[1.1] font-bold">
         {
           firstBlockText 
           && 
-          <span className="block">{firstBlockText}</span>
+          <span className="block lg:mt-2">{firstBlockText}</span>
         }
         {
           secondBlockText 
@@ -34,12 +34,12 @@ export const Hero: React.FC<HeroProps<string>> = ({
       {
         leftParagraphText
         &&
-        <p className="mt-6 md:mt-8 text-base md:text-lg lg:text-xl ">
+        <p className="md:ml-2 mt-6 md:mt-8 text-base md:text-lg lg:text-xl ">
           {leftParagraphText}
         </p>
       }
 
-      <div className="mt-12 md:mt-16 lg:mt-20 max-w-2xl justify-right float-right">
+      <div className="mt-12 md:mt-16 lg:mt-20 max-w-2xl justify-right lg:float-right">
         {
           rightParagraphText
           &&
