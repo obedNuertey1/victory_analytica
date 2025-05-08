@@ -2,19 +2,21 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import {IContactForm} from "./types";
 
 interface FormDropdownProps {
   label: string;
   options: string[];
-  setContactForm?: any;
+  setContactForm: React.Dispatch<React.SetStateAction<IContactForm>>;
 }
+
 
 const FormDropdown: React.FC<FormDropdownProps> = ({ label, options, setContactForm }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   
   React.useEffect(()=>{
-    setContactForm((prev:any)=>({...prev, serviceTier: selectedOption}));
+    setContactForm((prev:IContactForm)=>({...prev, serviceTier: `${selectedOption}`}));
   }, [selectedOption]);
 
   return (

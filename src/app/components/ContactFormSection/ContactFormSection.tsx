@@ -9,6 +9,7 @@ import FormDropdown from "./FormDropdown";
 import FormTextarea from "./FormTextarea";
 import SubmitButton from "./SubmitButton";
 import {toast, Toaster} from "react-hot-toast";
+import {IContactForm} from "./types";
 import "./ContactFormSection.css";
 
 const services = [
@@ -74,13 +75,23 @@ const services = [
   }
 ]
 
+// interface IContactForm{
+//   fullName: string;
+//   companyName: string;
+//   emailAddress: string;
+//   serviceTier: string;
+//   investmentRange: string;
+//   priorityComplianceNeeds: string;
+//   emailMessage: string;
+// }
+
 function ContactFormSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
 
-  const [contactForm, setContactForm] = React.useState<any>({
+  const [contactForm, setContactForm] = React.useState<IContactForm>({
     fullName: "",
     companyName: "",
     emailAddress: "",
@@ -128,7 +139,7 @@ function ContactFormSection() {
     visible: { y: 0, opacity: 1 }
   };
 
-  const handleContactForm = async (e:any)=>{
+  const handleContactForm = async (e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     console.log({...contactForm});
     try{
@@ -174,7 +185,7 @@ function ContactFormSection() {
               placeholder="e.g Michael Dwayne"
               aria-label="Full Name"
               onChange={(e)=>{
-                setContactForm((prev:any)=>({
+                setContactForm((prev:IContactForm)=>({
                   ...prev,
                   fullName: e.target.value
                 }))
@@ -190,7 +201,7 @@ function ContactFormSection() {
               placeholder="e.g Global Enterprises Inc"
               aria-label="Company Name"
               onChange={(e)=>{
-                setContactForm((prev:any)=>({
+                setContactForm((prev:IContactForm)=>({
                   ...prev,
                   companyName: e.target.value
                 }))
@@ -206,7 +217,7 @@ function ContactFormSection() {
               placeholder="e.g michael@globalenterprises.com"
               aria-label="Email address"
               onChange={(e)=>{
-                setContactForm((prev:any)=>({
+                setContactForm((prev:IContactForm)=>({
                   ...prev,
                   emailAddress: e.target.value
                 }))
@@ -235,7 +246,7 @@ function ContactFormSection() {
               placeholder="$5k - $100k+"
               aria-label="Investment Range"
               onChange={(e)=>{
-                setContactForm((prev:any)=>({
+                setContactForm((prev:IContactForm)=>({
                   ...prev,
                   investmentRange: e.target.value
                 }))
@@ -252,7 +263,7 @@ function ContactFormSection() {
             placeholder="Tax, Workforce, Asset Management"
             aria-label="Compliance Needs"
             onChange={(e)=>{
-              setContactForm((prev:any)=>({
+              setContactForm((prev:IContactForm)=>({
                 ...prev,
                 priorityComplianceNeeds: e.target.value
               }))
@@ -267,7 +278,7 @@ function ContactFormSection() {
             placeholder="Enter your message here..."
             aria-label="Strategy Details"
             onChange={(e)=>{
-              setContactForm((prev:any)=>({
+              setContactForm((prev:IContactForm)=>({
                 ...prev,
                 emailMessage: e.target.value
               }))

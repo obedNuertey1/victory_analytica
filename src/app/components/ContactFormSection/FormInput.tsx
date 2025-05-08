@@ -8,8 +8,8 @@ interface FormInputProps {
   type: string;
   placeholder: string;
   "aria-label": string;
-  value?: any;
-  onChange?: (e:any)=>void;
+  value?: string;
+  onChange?: (e:React.ChangeEvent<HTMLInputElement>)=>void;
   required?: boolean;
 }
 

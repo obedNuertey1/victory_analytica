@@ -7,8 +7,8 @@ interface FormTextareaProps {
   label: string;
   placeholder: string;
   "aria-label": string;
-  value?: any;
-  onChange?: (e:any)=>void;
+  value?: string;
+  onChange?: (e:React.ChangeEvent<HTMLTextAreaElement>)=>void;
   required?: boolean;
 }
 
