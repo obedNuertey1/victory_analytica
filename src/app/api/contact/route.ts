@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
         const year = new Date().getFullYear();
         const resend = new Resend("re_PgX1P2gZ_35z7e82VLFrEEaJUkCx96Jia");
         resend.emails.send({
-            from: 'contact@victoryanalytica.com',
+            from: 'contact@vicanalytica.com',
             to: 'onuertey1997@gmail.com',
             subject: 'Interested in working with you',
             html: `
