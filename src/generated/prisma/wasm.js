@@ -137,33 +137,15 @@ exports.Prisma.AdminScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
-exports.Prisma.ApplicationScalarFieldEnum = {
-  id: 'id',
-  jobId: 'jobId',
-  fullName: 'fullName',
-  email: 'email',
-  linkedIn: 'linkedIn',
-  message: 'message',
-  resumeUrl: 'resumeUrl',
-  createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
-};
-
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
 };
 
-exports.Prisma.NullsOrder = {
-  first: 'first',
-  last: 'last'
-};
-
 
 exports.Prisma.ModelName = {
   Job: 'Job',
-  Admin: 'Admin',
-  Application: 'Application'
+  Admin: 'Admin'
 };
 
 /**
