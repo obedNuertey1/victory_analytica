@@ -6,6 +6,3 @@
 [build.environment]
   NODE_ENV = "production"
   DATABASE_URL = "file:./prisma/prod.db"
-
-[[plugins]]
-package = "netlify-plugin-sqlite"
