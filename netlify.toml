@@ -1,0 +1,8 @@
+[build]
+  command = "npm install && npm run prisma:generate && npm run build"
+  publish = "out"
+  functions = "functions"
+
+[build.environment]
+  NODE_ENV = "production"
+  DATABASE_URL = "file:./prisma/prod.db"
