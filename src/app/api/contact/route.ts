@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     try {
         const data = await request.json();
         const year = new Date().getFullYear();
-        const websiteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://vicanalytica.com';
+        const websiteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.vicanalytica.com';
         const resend = new Resend("re_PgX1P2gZ_35z7e82VLFrEEaJUkCx96Jia");
         resend.emails.send({
             from: 'Vicanalytica contact <contact@vicanalytica.com>',
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
                                             <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 18px;">Client Message</h3>
                                             <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #3498db;">
                                                 <p style="margin: 0; color: #444; line-height: 1.6;">
-                                                    ${data.customMessage || 'No additional message provided'}
+                                                    ${data.emailMessage || 'No additional message provided'}
                                                 </p>
                                             </div>
                                         </td>
