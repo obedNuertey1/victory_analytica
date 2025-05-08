@@ -7,7 +7,7 @@ export function GET() {
 
 export async function POST(request: NextRequest) {
     try {
-        let data = await request.json();
+        const data = await request.json();
         const year = new Date().getFullYear();
         const resend = new Resend("re_PgX1P2gZ_35z7e82VLFrEEaJUkCx96Jia");
         resend.emails.send({
