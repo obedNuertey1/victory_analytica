@@ -3,7 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const SubmitButton = () => {
+interface SubmitButtonProps {
+  label?: string;
+  disabled?: boolean;
+}
+
+const SubmitButton: React.FC<SubmitButtonProps> = ({ label = "Send Message", disabled = false }) => {
   return (
     <motion.button
       type="submit"
@@ -11,8 +16,9 @@ const SubmitButton = () => {
       aria-label="Send Message"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      disabled={disabled}
     >
-      Send Message
+      {label}
     </motion.button>
   );
 };

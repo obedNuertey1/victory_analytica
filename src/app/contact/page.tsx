@@ -1,3 +1,4 @@
+// src\app\contact\page.tsx
 import React from 'react';
 import HeroSectionPartial from "@/app/components/HeroSection/HeroSectionPartial";
 import ContactSection from "@/app/components/ContactSection/ContactSection";

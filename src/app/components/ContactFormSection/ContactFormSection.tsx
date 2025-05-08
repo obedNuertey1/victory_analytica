@@ -75,16 +75,6 @@ const services = [
   }
 ]
 
-// interface IContactForm{
-//   fullName: string;
-//   companyName: string;
-//   emailAddress: string;
-//   serviceTier: string;
-//   investmentRange: string;
-//   priorityComplianceNeeds: string;
-//   emailMessage: string;
-// }
-
 function ContactFormSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
