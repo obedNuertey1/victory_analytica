@@ -22,7 +22,7 @@ export const ContactSection: React.FC = () => {
     {
       icon: "/assets/ContactSection/ContactSection/image-1.png",
       title: "Strategic Consultations",
-      content: "strategic@victoryanalytica.com",
+      content: "strategic@vicanalytica.com",
       link: "/contact#contact-form",
       type: "navlink"
     },

@@ -1,6 +1,6 @@
 // src\app\components\JoinUsSection\JoinUsSection.tsx
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FeatureCard } from "./FeatureCard";
@@ -24,10 +24,22 @@ const itemVariants = {
 
 export const JoinUsSection: React.FC = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2
   });
 
+  useEffect(() => {
+    // Dispatch event when inView changes
+    const event = new CustomEvent('navbarColorChange', { detail: { inView } });
+    window.dispatchEvent(event);
+    
+
+    return () => {
+      // Reset on unmount
+      const cleanupEvent = new CustomEvent('navbarColorChange', { detail: { inView: false } });
+      window.dispatchEvent(cleanupEvent);
+    };
+  }, [inView]);
 
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">

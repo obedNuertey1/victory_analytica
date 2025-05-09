@@ -10,10 +10,10 @@ export async function POST(request: NextRequest) {
         const data = await request.json();
         const year = new Date().getFullYear();
         const websiteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.vicanalytica.com';
-        const resend = new Resend("re_PgX1P2gZ_35z7e82VLFrEEaJUkCx96Jia");
-        resend.emails.send({
-            from: 'Vicanalytica contact <contact@vicanalytica.com>',
-            to: ['onuertey1997@gmail.com'],
+        const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+        const result = await resend.emails.send({
+            from: 'Vicanalytica|Contact <contact@vicanalytica.com>',
+            to: ['strategic@vicanalytica.com'],
             subject: 'Interested in working with you',
             html: `
                 <!DOCTYPE html>
@@ -121,6 +121,11 @@ export async function POST(request: NextRequest) {
                 </body>
                 </html>            `
         });
+
+        if(result.error){
+            throw new Error("Failed to send message");
+        }
+
         return NextResponse.json({ received: data })
     } catch (e) {
         console.log(e);

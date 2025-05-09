@@ -11,21 +11,23 @@ const NavItem = ({
   text,
   isActive = false,
   onClick,
-  href = "#"
+  href = "#",
+  isInJoinUsView = false
 }: {
   text: string;
   isActive?: boolean;
   onClick?: () => void;
   href?: string;
+  isInJoinUsView?: boolean;
 }) => (
   <Link
     href={href}
-    onClick={onClick}
-    className={`relative px-4 py-2 not-lg:text-2xl font-medium transition-all duration-300 ${isActive
-      ? 'text-blue-600'
-      : 'text-gray-600 hover:text-gray-900'
+    className={`relative px-4 py-2 not-lg:text-2xl font-medium transition-all duration-300 ${isInJoinUsView
+        ? 'text-white hover:text-white'
+        : isActive
+          ? 'text-blue-600'
+          : 'text-gray-600 hover:text-gray-900'
       }`}
-    aria-current={isActive ? "page" : undefined}
   >
     <span className="flex items-center gap-2">
       {text}
@@ -82,29 +84,63 @@ const NavItemMobile = ({
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathName = usePathname();
+  const [isJoinUsInView, setIsJoinUsInView] = useState(false);
+
+  // Handle scroll
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 85);
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const isPastThreshold = window.scrollY > 85;
-      setIsScrolled(isPastThreshold);
+    const handler = (e: Event) => {
+      const event = e as CustomEvent;
+      setIsJoinUsInView(event.detail.inView);
     };
-
-    // Ensure window is available (client-side only)
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-      // Initial check
-      handleScroll();
-
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
+    window.addEventListener('navbarColorChange', handler as EventListener);
+    return () => window.removeEventListener('navbarColorChange', handler as EventListener);
   }, []);
+
+  useEffect(() => {
+    const html = document.documentElement;
+    if (isJoinUsInView) {
+      html.classList.add('join-us-active');
+    } else {
+      html.classList.remove('join-us-active');
+    }
+
+    return () => html.classList.remove('join-us-active');
+  }, [isJoinUsInView]);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const isPastThreshold = window.scrollY > 85;
+  //     setIsScrolled(isPastThreshold);
+  //   };
+
+  //   // Ensure window is available (client-side only)
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', handleScroll);
+  //     // Initial check
+  //     handleScroll();
+
+  //     return () => window.removeEventListener('scroll', handleScroll);
+  //   }
+  // }, []);
 
   return (
     <nav className="drawer min-w-full">
       <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
 
       {/* Main Content */}
-      <div className={`drawer-content ${(isScrolled) ? "bg-gray-50 shadow-lg opacity-100" : ""} fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
+      <div className={`drawer-content ${isJoinUsInView
+          ? "bg-[#939595] backdrop-blur-sm text-white shadow-none backdrop-opacity-100"
+          : isScrolled
+            ? "bg-gray-50 shadow-lg opacity-100"
+            : ""
+        } fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
         <div className="navbar px-4 sm:px-8 py-4 flex items-center justify-center">
           {/* Mobile Menu Button */}
           <div className="flex-1 lg:hidden">
@@ -165,7 +201,7 @@ export const Navbar = () => {
               <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg text-center m-auto">
                   <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
-                  <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
+                  <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20 text-white">A</span>
                 </span>
               </div>
               <span>
@@ -196,6 +232,7 @@ export const Navbar = () => {
                     text={item.text}
                     isActive={pathName === item.path}
                     href={item.path}
+                    isInJoinUsView={isJoinUsInView}
                   />
                   <div className="absolute bottom-5 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
                 </motion.div>

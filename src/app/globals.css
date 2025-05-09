@@ -11,3 +11,32 @@ html {
     transform: translateZ(0);
     backface-visibility: hidden;
   }
+
+/* Default Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #939595;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #939595;
+  border-radius: 5px;
+}
+
+/* Join Us Section Scrollbar */
+.join-us-active::-webkit-scrollbar {
+  background: #939595;
+}
+
+.join-us-active::-webkit-scrollbar-thumb {
+  background: #939595;
+}
+
+/* Firefox Support */
+@supports (scrollbar-color: auto) {
+  .join-us-active {
+    scrollbar-color: #939595 #939595;
+    scrollbar-width: thin;
+  }
+}
