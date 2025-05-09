@@ -6,32 +6,32 @@ import { useRef, useState, useEffect } from "react";
 export const ClientLogos = () => {
   const logos = [
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/d1c99eb2d7d81e33a6b721f9d8d276d8bdbf5a06?placeholderIfAbsent=true",
+      src: "/assets/HeroSection/ClientLogos/client-logo-1.png",
       aspect: "3.55",
       width: "170",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/649b3b7b85316f6ef74fd238ed5ba5c95d82764c?placeholderIfAbsent=true",
+      src: "/assets/HeroSection/ClientLogos/client-logo-2.png",
       aspect: "3.48",
       width: "167",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/9be58a118642d464eb3cb7263d1f733c0cde0bde?placeholderIfAbsent=true",
+      src: "/assets/HeroSection/ClientLogos/client-logo-3.png",
       aspect: "4.13",
       width: "198",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/9708cbbd7dbef7c5a9c16a161da2909747aa526d?placeholderIfAbsent=true",
+      src: "/assets/HeroSection/ClientLogos/client-logo-4.png",
       aspect: "3.46",
       width: "166",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/058bc7201398c9653c768e4fd11b345204d92079?placeholderIfAbsent=true",
+      src: "/assets/HeroSection/ClientLogos/client-logo-5.png",
       aspect: "4.1",
       width: "197",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/4314c70e87b9b00d9c58d6ba010b7ffed86dcec2?placeholderIfAbsent=true",
+      src: "/assets/HeroSection/ClientLogos/client-logo-6.png",
       aspect: "3.79",
       width: "182",
     },
