@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -10,6 +11,7 @@ interface CTAButtonProps {
 
 export const CTAButton: React.FC<CTAButtonProps> = ({ children, onClick }) => {
   return (
+    <Link href="/careers" className="flex items-center justify-center">
     <motion.button
       onClick={onClick}
       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xl font-semibold py-6 px-8 rounded-xl transition-all duration-300 hover:shadow-2xl hover:from-blue-700 hover:to-purple-700"
@@ -18,5 +20,6 @@ export const CTAButton: React.FC<CTAButtonProps> = ({ children, onClick }) => {
     >
       {children}
     </motion.button>
+    </Link>
   );
 };

@@ -118,8 +118,8 @@ export const Navbar = () => {
               </span> */}
               <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg text-center m-auto">
-                    <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
-                    <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
+                  <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
+                  <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
                 </span>
               </div>
               <span>
@@ -164,8 +164,8 @@ export const Navbar = () => {
             >
               <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg text-center m-auto">
-                    <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
-                    <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
+                  <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
+                  <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
                 </span>
               </div>
               <span>
@@ -183,6 +183,7 @@ export const Navbar = () => {
                 { text: "Services", path: "/services" },
                 { text: "Contact Us", path: "/contact" },
                 { text: "FAQs", path: "/faq" },
+                { text: "Careers", path: "/careers" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -233,23 +234,23 @@ export const Navbar = () => {
             </div>
           </div> */}
           <div className="flex items-center gap-1.5 mb-8 border-b border-gray-100">
-              {/* <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+            {/* <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">VA</span>
               </div>
               <span>
                 <span className="block text-[1rem]">Victory Analytica</span>
                 <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
               </span> */}
-              <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg text-center m-auto">
-                    <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
-                    <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
-                </span>
-              </div>
-              <span>
-                <span className="block text-[1rem] font-bold">Victory Analytica</span>
-                <span className='block -mt-1.5 text-[1rem] tracking-[2px]'>& Security LLC</span>
+            <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg text-center m-auto">
+                <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
+                <span className="inline-block transform  -translate-x-[2.35px] scale-x-140 z-20">A</span>
               </span>
+            </div>
+            <span>
+              <span className="block text-[1rem] font-bold">Victory Analytica</span>
+              <span className='block -mt-1.5 text-[1rem] tracking-[2px]'>& Security LLC</span>
+            </span>
           </div>
 
           {/* Navigation Menu */}
@@ -333,6 +334,27 @@ export const Navbar = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M12 17.5v.5"
+                  />
+                </svg>
+              }
+            />
+            <NavItemMobile
+              text="Careers"
+              href='/careers'
+              isActive={pathName === "/careers"}
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
               }
