@@ -6,20 +6,20 @@ import Image from "next/image";
 export const SocialLinks: React.FC = () => {
   const socialIcons = [
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/ae9e8e2477daeb3d7635fa7b2b592ab0452b1ea8?placeholderIfAbsent=true",
-      alt: "Social Media 1",
+      src: "/assets/ContactSection/SocialLinks/facebook-icon.png",
+      alt: "facebook icon",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/cb8d469842e45edd17be5b995b288305318814d0?placeholderIfAbsent=true",
-      alt: "Social Media 2",
+      src: "/assets/ContactSection/SocialLinks/instagram-icon.png",
+      alt: "instagram icon",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/b8e1890697df35f37f9462e5c2325dcf1e492723?placeholderIfAbsent=true",
-      alt: "Social Media 3",
+      src: "/assets/ContactSection/SocialLinks/linkedIn-icon.png",
+      alt: "linkedIn icon",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/eb6a2667e4e004bd327c9e3efc9eca41f76f2af9?placeholderIfAbsent=true",
-      alt: "Social Media 4",
+      src: "/assets/ContactSection/SocialLinks/twitter-icon.png",
+      alt: "twitter icon",
     },
   ];
 

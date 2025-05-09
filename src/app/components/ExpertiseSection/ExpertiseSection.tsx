@@ -157,14 +157,14 @@ export const ExpertiseSection: React.FC = () => {
             },
             {
               backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
-              icon: "/assets/ExpertiseSection/ExpertiseSection/icon-4.png",
+              icon: "/assets/WhyChooseSection/WhyChooseSection/icon-1.png",
               title: "Orientation Tour",
               description: "Guide your team through California and Los Angeles tours to understand local business culture and opportunities.",
               id: "4"
             },
             {
               backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
-              icon: "/assets/ExpertiseSection/ExpertiseSection/icon-1.png",
+              icon: "/assets/ExpertiseSection/ExpertiseSection/icon-4.png",
               title: "Business Registration",
               description: "Handle all aspects of California and U.S. business registration, including filings and compliance documentation.",
               id: "5"
@@ -185,7 +185,7 @@ export const ExpertiseSection: React.FC = () => {
             },
             {
               backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
-              icon: "/assets/ExpertiseSection/ExpertiseSection/icon-4.png",
+              icon: "/assets/WhyChooseSection/WhyChooseSection/icon-2.png",
               title: "Identification Services",
               description: "Support with California State ID applications and identity verification processes for your key personnel.",
               id: "8"
