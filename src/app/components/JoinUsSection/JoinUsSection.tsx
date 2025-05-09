@@ -28,12 +28,13 @@ export const JoinUsSection: React.FC = () => {
     threshold: 0.2
   });
 
+
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 z-0">
         <motion.img
-          src="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/fc0a2934569cc9e7a47056732e31c2d3c7b39ae8?placeholderIfAbsent=true"
+          src="/assets/JoinUsSection/JoinUsSection/matt-white-bg.png"
           className="object-cover w-full h-full"
           alt="Background"
           initial={{ scale: 1.1 }}
@@ -72,7 +73,7 @@ export const JoinUsSection: React.FC = () => {
         >
           <FeatureCard
             variants={itemVariants}
-            iconSrc="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/9ccda1cf3fa18a94ee88f5ddaacb58db1137a150?placeholderIfAbsent=true"
+            iconSrc="/assets/JoinUsSection/JoinUsSection/image-1.png"
             title="Inclusive Environment"
             description="We celebrate diversity and foster a culture of respect and collaboration"
           />
@@ -80,7 +81,7 @@ export const JoinUsSection: React.FC = () => {
           <div className="space-y-8">
             <FeatureCard
               variants={itemVariants}
-              iconSrc="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/3264cba8c44bbb4d8dcdcd1592ae95808570f1d7?placeholderIfAbsent=true"
+              iconSrc="/assets/JoinUsSection/JoinUsSection/image-2.png"
               title="Flexible Work Options"
               description="Work remotely, on-site, or in a hybrid setup that suits your lifestyle."
             />
@@ -93,7 +94,7 @@ export const JoinUsSection: React.FC = () => {
 
           <FeatureCard
             variants={itemVariants}
-            iconSrc="https://cdn.builder.io/api/v1/image/assets/143904c0c722478e90e6e96d6b2341b6/0b259f7dd2b64ee7ea8e405b8730d3bbbc9f4898?placeholderIfAbsent=true"
+            iconSrc="/assets/JoinUsSection/JoinUsSection/image-3.png"
             title="Recognition & Rewards"
             description="Your contributions are valued, and we celebrate achievements big and small."
           />

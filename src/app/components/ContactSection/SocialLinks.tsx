@@ -29,7 +29,7 @@ export const SocialLinks: React.FC = () => {
         <motion.a
           key={index}
           href="#"
-          className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+          className="p-2 rounded-full hover:bg-gray-100 shadow-sm transition-colors"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -38,7 +38,7 @@ export const SocialLinks: React.FC = () => {
             alt={icon.alt}
             width={32}
             height={32}
-            className="w-6 h-6 md:w-8 md:h-8"
+            className="w-8 h-8 md:w-8 md:h-8"
           />
         </motion.a>
       ))}

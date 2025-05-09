@@ -8,69 +8,62 @@ import { TeamMemberCard } from "./TeamMemberCard";
 const teamMembers = [
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/fce160e8922a18ce97336979c6178e340709ef88?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-1.png",
     name: "Timothy Franey",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Timothy Franey",
   },
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/be4c7ef010761c3f810f7a4b6a1f474b7f53f91c?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-2.png",
     name: "Carroll Keeling",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Carroll Keeling",
   },
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/2897c4ea4f95f4953f2cf4c50b34649239784ecd?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-3.png",
     name: "Johanna Kassulke",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Johanna Kassulke",
   },
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/ffdcbeefcfa22fba867171f9a384f40c6a6323b1?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-4.png",
     name: "Leslie Willms",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Leslie Willms",
   },
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4220f6f7d81e54d006cc19b26efe859377633970?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-5.png",
     name: "Francis Smith",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Francis Smith",
   },
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/49d1224814202f8fa7eb8273d68a0e4c49fd1603?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-6.png",
     name: "Roderick Gulgowski",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Roderick Gulgowski",
   },
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/c670f44897828be5fee072df9994864d868d7ab1?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-7.png",
     name: "Ethel Mitchell",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Ethel Mitchell",
   },
   {
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/0ad10015138250620d2f275bfefcb749b4874139?placeholderIfAbsent=true",
+      "/assets/TeamsSection/TeamsSection/image-8.png",
     name: "Adam Harber",
     role: "Co-Founder, Victory Analytica & Security",
     altText: "Adam Harber",
-  },
-  {
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/3b25a42ce20bf6461f5b4eb9681176d48eaab5e7?placeholderIfAbsent=true",
-    name: "Sandy Buckridge",
-    role: "Co-Founder, Victory Analytica & Security",
-    altText: "Sandy Buckridge",
-  },
+  }
 ];
-
+// \assets\TeamsSection\TeamsSection\image-1.png
 export const TeamSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -104,7 +97,9 @@ export const TeamSection: React.FC = () => {
           <TeamHeader />
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member, index) => {
+
+              return(
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -114,7 +109,7 @@ export const TeamSection: React.FC = () => {
               >
                 <TeamMemberCard {...member} />
               </motion.div>
-            ))}
+            )})}
           </div>
         </motion.div>
       </div>
