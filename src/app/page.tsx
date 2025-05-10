@@ -1,4 +1,4 @@
-import HeroSection from "@/app/components/HeroSection/HeroSection";
+import HeroSection from "@/app/components/HeroSection/HeroSection2";
 import ExpertiseSection from "@/app/components/ExpertiseSection/ExpertiseSection";
 import ImpactSection from "@/app/components/ImpactSection/ImpactSection";
 import WhyChooseSection from "@/app/components/WhyChooseSection/WhyChooseSection";
@@ -13,6 +13,7 @@ export default function Home() {
   metadata.icons = {
     icon: "/favicon.ico",
   }
+  
   return (
     <div className="flex overflow-hidden relative flex-col self-stretch min-h-[1024px]">
       {/* <Background /> */}

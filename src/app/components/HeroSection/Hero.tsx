@@ -2,6 +2,7 @@
 import * as React from "react";
 import ConsultationButton from "../ConsultationButton";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 interface HeroProps<S>{
   firstBlockText?: S;
@@ -16,8 +17,12 @@ export const Hero: React.FC<HeroProps<string>> = ({
   leftParagraphText,
   rightParagraphText
 }) => {
+  const pathName = usePathname();
+
+  const isHomePage = pathName === "/"
+
   return (
-    <section className="text-gray-900 lg:-mt-6 mx-auto max-w-7xl">
+    <section className={`${isHomePage? "text-white":"text-gray-900"} max-w-7xl lg:-mt-6 mx-auto`}>
       <h1 className="text-4xl md:text-6xl lg:text-8xl xl:text-8xl leading-[1.2] md:leading-[1.1] font-bold">
         {
           firstBlockText 

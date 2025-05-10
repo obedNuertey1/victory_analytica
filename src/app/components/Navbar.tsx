@@ -12,21 +12,27 @@ const NavItem = ({
   isActive = false,
   onClick,
   href = "#",
-  isInJoinUsView = false
+  isInJoinUsView = false,
+  isInHeroSectionView = false,
+  isScrolled2 = false,
+  isHomePage2 = false,
 }: {
   text: string;
   isActive?: boolean;
   onClick?: () => void;
   href?: string;
   isInJoinUsView?: boolean;
+  isInHeroSectionView?: boolean;
+  isScrolled2?: boolean;
+  isHomePage2?: boolean;
 }) => (
   <Link
     href={href}
-    className={`relative px-4 py-2 not-lg:text-2xl font-medium transition-all duration-300 ${isInJoinUsView
+    className={`relative px-4 py-2 not-lg:text-2xl font-medium transition-all duration-300 ${(isInJoinUsView)
         ? 'text-white hover:text-white'
         : isActive
           ? 'text-blue-600'
-          : 'text-gray-600 hover:text-gray-900'
+          : ((isScrolled2 && isHomePage2)?"text-gray-600 hover:text-gray-900": ((!isHomePage2)? "text-gray-600 hover:text-gray-900": "text-white"))
       }`}
   >
     <span className="flex items-center gap-2">
@@ -85,13 +91,23 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathName = usePathname();
   const [isJoinUsInView, setIsJoinUsInView] = useState(false);
+  const [isScrolled2, setIsScrolled2] = useState(false);
+  const [isHeroSectionInView, setIsHeroSectionInView] = useState(false);
 
   // Handle scroll
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 85);
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    const handleScroll2 = () => setIsScrolled2(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll2);
+    handleScroll2(); // Initial check
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll2);
+    }
   }, []);
 
   useEffect(() => {
@@ -99,8 +115,18 @@ export const Navbar = () => {
       const event = e as CustomEvent;
       setIsJoinUsInView(event.detail.inView);
     };
+
+    const handler2 = (e: Event) => {
+      const event = e as CustomEvent;
+      setIsHeroSectionInView(event.detail.inViewHero);
+    };
+    
+    window.addEventListener('navbarHeroColorChange', handler2 as EventListener);
     window.addEventListener('navbarColorChange', handler as EventListener);
-    return () => window.removeEventListener('navbarColorChange', handler as EventListener);
+    return () => {
+      window.removeEventListener('navbarHeroColorChange', handler2 as EventListener);
+      window.removeEventListener('navbarColorChange', handler as EventListener);
+    }
   }, []);
 
   useEffect(() => {
@@ -111,25 +137,20 @@ export const Navbar = () => {
       html.classList.remove('join-us-active');
     }
 
-    return () => html.classList.remove('join-us-active');
-  }, [isJoinUsInView]);
+    if (isHeroSectionInView) {
+      html.classList.add('hero-section-active');
+    }else {
+      html.classList.remove('hero-section-active');
+    }
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const isPastThreshold = window.scrollY > 85;
-  //     setIsScrolled(isPastThreshold);
-  //   };
-
-  //   // Ensure window is available (client-side only)
-  //   if (typeof window !== 'undefined') {
-  //     window.addEventListener('scroll', handleScroll);
-  //     // Initial check
-  //     handleScroll();
-
-  //     return () => window.removeEventListener('scroll', handleScroll);
-  //   }
-  // }, []);
-
+    return () => {
+      html.classList.remove('join-us-active');
+      html.classList.remove('hero-section-active');
+    }
+  }, [isJoinUsInView, isHeroSectionInView]);
+  
+    const pathName2 = usePathname();
+    const isHomePage2 = pathName2 === "/";
   return (
     <nav className="drawer min-w-full">
       <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
@@ -139,19 +160,12 @@ export const Navbar = () => {
           ? "bg-[#939595] backdrop-blur-sm text-white shadow-none backdrop-opacity-100"
           : isScrolled
             ? "bg-gray-50 shadow-lg opacity-100"
-            : ""
-        } fixed top-0 z-20 flex min-w-full items-center justify-center transition-all duration-700`}>
+            : `${isHomePage2 && "text-white"}`
+        } fixed top-0 z-30 flex min-w-full items-center justify-center transition-all duration-700`}>
         <div className="navbar px-4 sm:px-8 py-4 flex items-center justify-center">
           {/* Mobile Menu Button */}
           <div className="flex-1 lg:hidden">
             <div className="flex items-center gap-1.5">
-              {/* <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">VA</span>
-              </div>
-              <span>
-                <span className="block text-[1rem]">Victory Analytica</span>
-                <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
-              </span> */}
               <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg text-center m-auto">
                   <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
@@ -233,6 +247,9 @@ export const Navbar = () => {
                     isActive={pathName === item.path}
                     href={item.path}
                     isInJoinUsView={isJoinUsInView}
+                    isInHeroSectionView={isHeroSectionInView}
+                    isScrolled2={isScrolled2}
+                    isHomePage2={isHomePage2}
                   />
                   <div className="absolute bottom-5 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
                 </motion.div>
@@ -261,23 +278,7 @@ export const Navbar = () => {
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-200/30 rounded-full blur-xl" />
 
           {/* Branding Section */}
-          {/* <div className="flex items-center gap-3 mb-8 pb-6 border-b border-gray-100">
-            <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">VA</span>
-            </div>
-            <div>
-              <h2 className="text-xl font-bold text-gray-900">Victory Analytica</h2>
-              <p className="text-sm text-gray-500">Innovating Solutions</p>
-            </div>
-          </div> */}
           <div className="flex items-center gap-1.5 mb-8 border-b border-gray-100">
-            {/* <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">VA</span>
-              </div>
-              <span>
-                <span className="block text-[1rem]">Victory Analytica</span>
-                <span className='block -mt-1.5 text-[1rem]'>& Security LLC</span>
-              </span> */}
             <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg text-center m-auto">
                 <span className='inline-block transform text-blue-500 translate-x-[2.35px] scale-x-140 z-10' >V</span>
