@@ -116,7 +116,7 @@ export const ExpertiseSection: React.FC = () => {
         <div className="absolute inset-0 bg-[url('/assets/ExpertiseSection/ExpertiseSection/matt-white-bg-2.png')] mix-blend-overlay" />
       </motion.div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-1 sm:px-6 lg:px-8">
         <motion.header
           className="mb-16 md:mb-24 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -132,73 +132,73 @@ export const ExpertiseSection: React.FC = () => {
         </motion.header>
 
 
-        <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
+        <div className="flex flex-wrap justify-center items-center flex-row gap-3 sm:gap-5">
           {[
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1607385404764-380a5e06c7fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVzaW5lc3MlMjByZXByZXNlbnRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-1.png",
               title: "USA Business Representation",
               description: "Assign a dedicated U.S. business representative to act on your behalf and facilitate all in‑country engagements.",
               id: "1"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFua2luZ3xlbnwwfHwwfHx8MA%3D%3D",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-2.png",
               title: "Address & Banking",
               description: "Secure a U.S.‑based business address and set up corporate bank accounts to streamline your financial operations.",
               id: "2"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-3.png",
               title: "Networking & Market Insights",
               description: "Provide connections with potential partners and deliver actionable insights into U.S. market trends and opportunities.",
               id: "3"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1563457012475-13cf086fd600?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVzaW5lc3MlMjBvcmllbnRhdGlvbiUyMHRvdXJ8ZW58MHx8MHx8fDA%3D",
               icon: "/assets/WhyChooseSection/WhyChooseSection/icon-1.png",
               title: "Orientation Tour",
               description: "Guide your team through California and Los Angeles tours to understand local business culture and opportunities.",
               id: "4"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1681505526188-b05e68c77582?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QnVzaW5lc3MlMjBSZWdpc3RyYXRpb258ZW58MHx8MHx8fDA%3D",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-4.png",
               title: "Business Registration",
               description: "Handle all aspects of California and U.S. business registration, including filings and compliance documentation.",
               id: "5"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1631540702177-d2b28aa09fb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRheCUyMGlkZW50aWZpY2F0aW9ufGVufDB8fDB8fHww",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-5.png",
               title: "Tax Identification",
               description: "Assist with applying for ITIN, EIN, and provide guidance on tax planning and compliance requirements.",
               id: "6"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.pexels.com/photos/7247413/pexels-photo-7247413.jpeg?auto=compress&cs=tinysrgb&w=600",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-6.png",
               title: "Financial & Legal Compliance",
               description: "Introduce you to professional accountants and legal advisors to ensure full compliance with U.S. regulations.",
               id: "7"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1649209979970-f01d950cc5ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEZpbmFuY2lhbCUyMCUyNiUyMExlZ2FsJTIwQ29tcGxpYW5jZXxlbnwwfHwwfHx8MA%3D%3D",
               icon: "/assets/WhyChooseSection/WhyChooseSection/icon-2.png",
               title: "Identification Services",
               description: "Support with California State ID applications and identity verification processes for your key personnel.",
               id: "8"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1701790644702-292e25180524?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fExlZ2FsJTIwU2VydmljZXMlMjAlMjYlMjBQZXJtaXRzfGVufDB8fDB8fHww",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-2.png",
               title: "Legal Services & Permits",
               description: "Provide legal consultation and assistance with work permit applications for foreign employees.",
               id: "9"
             },
             {
-              backgroundImage: "/assets/ExpertiseSection/ExpertiseSection/matt-white-bg.png",
+              backgroundImage: "https://images.unsplash.com/photo-1654531280475-6e9513b0375f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QXNzZXQlMjBBY3F1aXNpdGlvbiUyMCUyNiUyME1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D",
               icon: "/assets/ExpertiseSection/ExpertiseSection/icon-1.png",
               title: "Asset Acquisition & Management",
               description: "Full support in acquiring and managing operational assets—property, vehicles, equipment—with legal and financial coordination.",
@@ -207,7 +207,7 @@ export const ExpertiseSection: React.FC = () => {
           ].map((service, index) => (
             <motion.div
               key={index}
-              className="w-full sm:w-[45%] lg:w-[30%] xl:w-[25%]"
+              className="w-fit"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "0px 0px -100px 0px" }}
