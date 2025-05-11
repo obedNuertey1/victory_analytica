@@ -87,13 +87,11 @@ function HeroSection() {
             <Navbar />
 
             {/* Combined slider for background and content */}
-            <Slider {...settings} className="absolute inset-0 -z-10 h-screen">
+            {/* <Slider {...settings} className="absolute inset-0 -z-10 h-screen">
                 {slideContent.map((slide, index) => (
                     <div key={index} className="relative h-full ">
-                        {/* Background image */}
                         <Background2 imgUrl={slide.imgUrl} />
 
-                        {/* Content overlay */}
                         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
                             <Hero
                                 firstBlockText={slide.firstBlockText}
@@ -102,17 +100,30 @@ function HeroSection() {
                                 rightParagraphText={slide.rightParagraph}
                             />
                         </div>
-                        {/* <div className="h-full flex items-center">
-                            <Hero
-                                firstBlockText={slide.firstBlockText}
-                                secondBlockText={slide.secondBlockText}
-                                leftParagraphText={slide.leftParagraph}
-                                rightParagraphText={slide.rightParagraph}
-                            />
-                        </div> */}
+                    </div>
+                ))}
+            </Slider> */}
+             <Slider {...settings} className="absolute inset-0 z-10 h-screen">
+                {slideContent.map((slide, index) => (
+                    <div key={index} className="relative h-full">
+                        {/* Background image */}
+                        <Background2 imgUrl={slide.imgUrl} />
+
+                        {/* Content overlay */}
+                        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                            <div className="w-full max-w-7xl mx-auto"> {/* Added wrapper div */}
+                                <Hero
+                                    firstBlockText={slide.firstBlockText}
+                                    secondBlockText={slide.secondBlockText}
+                                    leftParagraphText={slide.leftParagraph}
+                                    rightParagraphText={slide.rightParagraph}
+                                />
+                            </div>
+                        </div>
                     </div>
                 ))}
             </Slider>
+
 
             {/* Client Logos positioned absolutely at bottom */}
             <div className="absolute bottom-0 w-screen z-20">

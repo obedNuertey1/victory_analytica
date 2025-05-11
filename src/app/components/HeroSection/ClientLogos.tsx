@@ -1,11 +1,11 @@
-// src/app/components/HeroSection/ClientLogos.tsx
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useState } from "react";
 
 export const ClientLogos = () => {
-  const logos = [
-    {
+  const logos = [{
       src: "/assets/HeroSection/ClientLogos/client-logo-1.png",
       aspect: "3.55",
       width: "170",
@@ -34,61 +34,74 @@ export const ClientLogos = () => {
       src: "/assets/HeroSection/ClientLogos/client-logo-6.png",
       aspect: "3.79",
       width: "182",
-    },
-  ];
-
-  const duplicatedLogos = [...logos, ...logos, ...logos]; // Triple for seamless loop
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
-  const [containerWidth, setContainerWidth] = useState(0);
-
-  // Calculate container width on mount
-  useEffect(() => {
-    if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
     }
-  }, []);
+  ]
 
-  // Scroll-driven animation
-  const x = useTransform(scrollY, (latest) => {
-    const scrollSpeed = 0.5; // Adjust this value to control speed
-    return (-latest * scrollSpeed) % (containerWidth * 0.75);
-  });
+ 
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { 
+      loop: true,
+      align: "start",
+      skipSnaps: true,
+      duration: 30000
+    }, 
+    [Autoplay({ delay: 0, stopOnInteraction: false })]
+  );
+
+  // Double the logos array for seamless infinite loop
+  const duplicatedLogos = [...logos, ...logos, ...logos];
+
+  const scrollSpeed = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollNext();
+    requestAnimationFrame(scrollSpeed);
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (emblaApi) {
+      scrollSpeed();
+    }
+  }, [emblaApi, scrollSpeed]);
 
   return (
-    <div className="mt-20 md:mt-32 lg:mt-40 container mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       <h2 className="text-xl md:text-2xl font-semibold text-gray-100 text-center mb-8">
         Join our ever-growing client list
       </h2>
 
-      <motion.div 
-        ref={containerRef}
-        className="flex flex-row gap-4 md:gap-6"
-        style={{ x }}
-      >
-        {duplicatedLogos.map((logo, index) => (
-          <div 
-            key={index} 
-            className="flex-shrink-0 p-2 transition-opacity hover:opacity-100"
-            style={{ opacity: 0.7 }}
-          >
-            <motion.img
-              src={logo.src}
-              alt={`Client logo ${index + 1}`}
-              className="max-h-12 md:max-h-16 w-auto object-contain"
-              style={{
-                aspectRatio: logo.aspect,
-                width: `${logo.width}px`,
-                filter: "grayscale(100%)",
-              }}
-              whileInView={{
-                filter: "grayscale(0%)",
-                transition: { duration: 0.3 }
-              }}
-            />
-          </div>
-        ))}
-      </motion.div>
+      <div className="embla overflow-hidden" ref={emblaRef}>
+        <div className="embla__container flex gap-4 md:gap-6">
+          {duplicatedLogos.map((logo, index) => (
+            <div 
+              key={index}
+              className="embla__slide flex-shrink-0"
+              style={{ flex: `0 0 ${logo.width}px` }}
+            >
+              <motion.div
+                className="p-2"
+                initial={{ opacity: 0.7 }}
+                whileHover={{ opacity: 1 }}
+              >
+                <motion.img
+                  src={logo.src}
+                  alt={`Client logo ${index + 1}`}
+                  className="max-h-10 md:max-h-16 w-auto object-contain"
+                  style={{
+                    aspectRatio: logo.aspect,
+                    width: `${logo.width}px`,
+                    filter: "grayscale(100%)",
+                  }}
+                  whileInView={{
+                    filter: "grayscale(0%)",
+                    transition: { duration: 0.3 }
+                  }}
+                  viewport={{ once: true }}
+                />
+              </motion.div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
