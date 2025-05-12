@@ -34,7 +34,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
             <p className="mb-3">
               {description}
             </p>
-            <Link href={`/service-table?highlight=${id}`} className='group mx-auto text-white bg-green-400 overflow-hidden hover:cursor-pointer p-3 rounded-lg font-bold text-black transition-all duration-300 hover:pr-4 hover:bg-green-400/80 inline-block mx-auto'>
+            <Link href={`/services/${id}`} className='group mx-auto text-white bg-green-400 overflow-hidden hover:cursor-pointer p-3 rounded-lg font-bold  transition-all duration-300 hover:pr-4 hover:bg-green-400/80 inline-block'>
               <span className='inline-block transition-all duration-300'>
                 <ArrowRightIcon className='ml-2 inline-block transition-transform duration-300 group-hover:translate-x-2 -translate-x-16 transform motion-reduce:transform-none' />
                 <span className='inline-block transition-transform duration-300 group-hover:translate-x-5 transform motion-reduce:transform-none'>LEARN MORE</span>
@@ -46,7 +46,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           </div>
         </motion.div>
       </div>
-      <Link href={`/service-table?highlight=${id}`} className="block sm:hidden shadow-lg hover:shadow-xl card-container rounded-3xl size-[11rem] md:size-[24rem] relative overflow-clip">
+      <Link href={`/services/${id}`} className="block sm:hidden shadow-lg hover:shadow-xl card-container rounded-3xl size-[11rem] md:size-[24rem] relative overflow-clip">
         <div className="size-full absolute -top-20 -z-10">
           <img className="size-full object-cover" src={`${backgroundImage}`} />
           <div className="bg-gray-100 h-[6rem] w-full flex items-center justify-center text-black">

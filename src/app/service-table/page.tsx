@@ -1,4 +1,4 @@
-// src\app\about\page.tsx
+// src\app\service-table\page.tsx
 import React, {Suspense} from 'react';
 import HeroSectionPartial from "@/app/components/HeroSection/HeroSectionPartial";
 import ContactSection from "@/app/components/ContactSection/ContactSection";
