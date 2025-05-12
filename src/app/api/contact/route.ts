@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
         const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
         const result = await resend.emails.send({
             from: 'Vicanalytica|Contact <contact@vicanalytica.com>',
-            to: ['strategic@vicanalytica.com'],
+            to: ['strategic@vicanalytica.com', 'onuertey1997@gmail.com'],
             subject: 'Interested in working with you',
             html: `
                 <!DOCTYPE html>
