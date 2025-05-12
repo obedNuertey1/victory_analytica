@@ -1,18 +1,18 @@
 @import "tailwindcss";
-@plugin "daisyui"; 
+@plugin "daisyui";
 
 /* Smooth scroll behavior */
 html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Optimize animation performance */
-  img {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
+  scroll-behavior: smooth;
+}
 
-  /* body{
+/* Optimize animation performance */
+img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* body{
     @apply 
   } */
 
@@ -29,20 +29,74 @@ html {
 }
 
 /* Join Us Section Scrollbar */
-.join-us-active::-webkit-scrollbar {
+/* .join-us-active::-webkit-scrollbar {
   background: #939595;
 }
 
 .join-us-active::-webkit-scrollbar-thumb {
   background: #939595;
-}
+} */
 
 /* Firefox Support */
-@supports (scrollbar-color: auto) {
+/* @supports (scrollbar-color: auto) {
   .join-us-active {
     scrollbar-color: #939595 #939595;
     scrollbar-width: thin;
   }
+  .hero-section-active{
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+  }
+}
+
+.hero-section-active::-webkit-scrollbar-thumb{
+  background: transparent;
+  scrollbar-width: none;
+  scroll-padding: 0;
+  scrollbar-gutter: 0;
+}
+
+.hero-section-active::-webkit-scrollbar{
+  background: transparent;
+  scrollbar-width: none;
+  scroll-padding: 0;
+  scrollbar-gutter: 0;
+}
+
+.hero-section-active::-webkit-scrollbar-track{
+  background: transparent;
+} */
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* WebKit browsers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.join-us-active,
+.hero-section-active {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Optional: Apply to specific elements */
+.hero-section-active::-webkit-scrollbar,
+.join-us-active::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
 /* Custom slider styles */
@@ -54,6 +108,7 @@ html {
   font-size: 12px;
   color: #4a5568;
 }
+
 
 .hero-slider .slick-dots li.slick-active button:before {
   color: #4299e1;
@@ -81,18 +136,21 @@ html {
 }
 
 @media (max-width: 768px) {
+
   .hero-slider .slick-prev,
   .hero-slider .slick-next {
     display: none !important;
   }
 }
 
-.slick-slider, .slick-list, .slick-track {
-    height: 100%;
+.slick-slider,
+.slick-list,
+.slick-track {
+  height: 100%;
 }
 
-.slick-slide > div {
-    height: 100%;
+.slick-slide>div {
+  height: 100%;
 }
 
 .embla__slide {

@@ -36,7 +36,7 @@ export const ContactSection: React.FC = () => {
     {
       icon: "/assets/ContactSection/ContactSection/image-3.png",
       title: "HQ & Consultations",
-      content: "1999 Avenue California, Los Angeles, CA 90089",
+      content: "11808 Vienna Lane, Los Angeles, Ca 90047",
       link: "#",
       type: "blank"
     },
