@@ -164,7 +164,7 @@ const tierColors = {
     }
 };
 
-export default function ServicePage({ params }: { params: { id: string } }) {
+export default function ServicePage({ params }: any) {
     const id = parseInt(params?.id);
     const feature = serviceFeatures[id];
 
