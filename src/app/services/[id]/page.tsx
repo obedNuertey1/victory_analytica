@@ -17,12 +17,12 @@ interface ServiceFeature {
 const serviceFeatures: ServiceFeature[] = [
     {
         feature: 'Timeframe',
-        silver: '2 Weeks',
-        gold: '2 Weeks',
-        platinum2: '2 Weeks',
-        platinum3: '3 Weeks',
-        diamond: '3 Weeks',
-        elite: '4 Weeks'
+        silver: '1 Day',
+        gold: '2 Days',
+        platinum2: '3 Days',
+        platinum3: '3 Days',
+        diamond: '4 Days',
+        elite: '5 Days'
     },
     {
         feature: 'USA Business Representation',
@@ -117,12 +117,12 @@ const serviceFeatures: ServiceFeature[] = [
 ];
 
 const timeframes = {
-    silver: '2 Weeks',
-    gold: '2 Weeks',
-    platinum2: '2 Weeks',
-    platinum3: '3 Weeks',
-    diamond: '3 Weeks',
-    elite: '4 Weeks'
+    silver: '1 Day',
+    gold: '2 Days',
+    platinum2: '3 Days',
+    platinum3: '3 Days',
+    diamond: '4 Days',
+    elite: '5 Days'
 };
 
 const tierColors = {
@@ -202,7 +202,7 @@ export default function ServicePage({ params }: any) {
                     {feature.feature}
                 </h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                     {Object.entries(timeframes).map(([tier, timeframe]) => {
                         const description = feature[tier as keyof ServiceFeature];
                         const displayText = description.replace(/-/g, '').trim();
@@ -230,6 +230,7 @@ export default function ServicePage({ params }: any) {
                         );
                     })}
                 </div>
+                <Link className="block shadow-sm hover:shadow-md transition-shadow transition-color h-[5rem] w-full bg-blue-600 hover:bg-blue-600/80 text-center text-white text-2xl text-bold rounded-xl" href={`/service-table?highlight=${id}`}><div className="flex flex-col items-center justify-center text-center m-auto w-full h-full"><span>All Swimlanes</span></div></Link>
             </div>
             <ContactSection />
         </div>

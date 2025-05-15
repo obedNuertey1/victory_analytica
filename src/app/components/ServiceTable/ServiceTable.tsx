@@ -44,12 +44,12 @@ export default function ServiceTable() {
     const serviceFeatures: ServiceFeature[] = [
         {
             feature: 'Timeframe',
-            silver: '2 Weeks',
-            gold: '2 Weeks',
-            platinum2: '2 Weeks',
-            platinum3: '3 Weeks',
-            diamond: '3 Weeks',
-            elite: '4 Weeks'
+            silver: '1 Day',
+            gold: '2 Days',
+            platinum2: '3 Days',
+            platinum3: '3 Days',
+            diamond: '4 Days',
+            elite: '5 Days'
         },
         {
             feature: 'USA Business Representation',
@@ -149,12 +149,12 @@ export default function ServiceTable() {
                 <thead className="bg-base-200">
                     <tr>
                         <th className="text-sm md:text-lg font-bold whitespace-normal">Service Feature</th>
-                        <th className="bg-silver text-sm md:text-base whitespace-normal px-2">Silver</th>
-                        <th className="bg-gold text-sm md:text-base whitespace-normal px-2">Gold</th>
-                        <th className="bg-platinum text-sm md:text-base whitespace-normal px-2">Platinum (2W)</th>
-                        <th className="bg-platinum text-sm md:text-base whitespace-normal px-2">Platinum (3W)</th>
-                        <th className="bg-diamond text-sm md:text-base whitespace-normal px-2">Diamond</th>
-                        <th className="bg-elite text-sm md:text-base whitespace-normal px-2">Elite</th>
+                        <th className="bg-gray-100 text-gray-800 text-sm md:text-base whitespace-normal px-2">Silver</th>
+                        <th className="bg-amber-50 text-amber-800 text-sm md:text-base whitespace-normal px-2">Gold</th>
+                        <th className="bg-blue-50 text-blue-800 text-sm md:text-base whitespace-normal px-2">Platinum (2W)</th>
+                        <th className="bg-sky-50 text-sky-800 text-sm md:text-base whitespace-normal px-2">Platinum (3W)</th>
+                        <th className="bg-purple-50 text-purple-800 text-sm md:text-base whitespace-normal px-2">Diamond</th>
+                        <th className="bg-elite bg-indigo-50 text-indigo-800 text-sm md:text-base whitespace-normal px-2">Elite</th>
                     </tr>
                 </thead>
                 <tbody>
