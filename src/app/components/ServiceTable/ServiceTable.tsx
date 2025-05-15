@@ -154,7 +154,7 @@ export default function ServiceTable() {
                         <th className="bg-blue-50 text-blue-800 text-sm md:text-base whitespace-normal px-2">Platinum (2W)</th>
                         <th className="bg-sky-50 text-sky-800 text-sm md:text-base whitespace-normal px-2">Platinum (3W)</th>
                         <th className="bg-purple-50 text-purple-800 text-sm md:text-base whitespace-normal px-2">Diamond</th>
-                        <th className="bg-elite bg-indigo-50 text-indigo-800 text-sm md:text-base whitespace-normal px-2">Elite</th>
+                        <th className="bg-indigo-50 text-indigo-800 text-sm md:text-base whitespace-normal px-2">Elite</th>
                     </tr>
                 </thead>
                 <tbody>

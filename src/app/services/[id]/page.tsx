@@ -172,8 +172,9 @@ export default function ServicePage({ params }: any) {
     if (!feature) return notFound();
 
     return (
+        <>
+        <Navbar />
         <div className="flex flex-col self-stretch bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <Navbar />
             <div className='my-[4rem]' />
             <div className="max-w-4xl mx-auto">
                 <div className="mb-8 flex items-center justify-between">
@@ -234,5 +235,6 @@ export default function ServicePage({ params }: any) {
             </div>
             <ContactSection />
         </div>
+        </>
     );
 }
