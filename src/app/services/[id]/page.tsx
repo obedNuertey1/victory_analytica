@@ -1866,7 +1866,7 @@ const serviceFeatures: ServiceFeature[] = [
             ]
         },
         platinum3: {
-            description: 'Help in applying for ITIN and EIN.', 
+            description: 'Help in applying for ITIN and EIN.',
             services: [
                 {
                     serviceName: 'USA Business Representation',
@@ -3455,19 +3455,25 @@ export default function ServicePage({ params }: any) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                         {Object.entries(timeframes).map(([tier, timeframe]) => {
                             const serviceFeat = feature[tier as keyof ServiceFeature];
-                            let description = "description";
-                            // @ts-expect-error error occurs here
-                            const desc = serviceFeat[description as keyof OtherServiceTypes]
 
-                            const services = "services";
+                            let description = '';
+                            let services: { serviceName: string; urlParam: number; modelPackage: string }[] = [];
 
-                            // @ts-expect-error error occurs here as well
-                            const otherServices = serviceFeat[services as keyof OtherServiceTypes]
+                            if (typeof serviceFeat === 'object' && serviceFeat !== null) {
+                                description = serviceFeat.description;
+                                services = serviceFeat.services;
+                            } else if (typeof serviceFeat === 'string') {
+                                description = serviceFeat;
+                            }
 
-                            const displayText = desc?.replace(/-/g, '').trim();
+                            const displayText = description?.replace(/-/g, '').trim();
+                            if(!displayText) return null;
 
-                            // Skip card if empty or dash-only content
-                            if (!displayText) return null;
+                            const validServices = services.filter(service =>
+                                service.modelPackage?.trim() !== ''
+                            );
+
+                            if (!description.trim() && validServices.length === 0) return null;
 
                             return (
                                 <div
@@ -3482,9 +3488,35 @@ export default function ServicePage({ params }: any) {
                                             {timeframe}
                                         </span>
                                     </div>
-                                    <p className={`${tierColors[tier as keyof typeof tierColors].text} opacity-90`}>
-                                        {displayText}
-                                    </p>
+
+                                    {description.trim() && (
+                                        <p className={`${tierColors[tier as keyof typeof tierColors].text} opacity-90 mb-4`}>
+                                            {description}
+                                        </p>
+                                    )}
+
+                                    {validServices.length > 0 && (
+                                        <>
+                                            <hr className={`${tierColors[tier as keyof typeof tierColors].border} mt-4`} />
+                                            <div className="pt-4 border-t border-gray-200">
+                                                <h3 className="text-lg font-semibold mb-3 text-gray-700">Other { tier.charAt(0).toUpperCase() + tier.substr(1, tier.length-1).toLowerCase()}  Services</h3>
+                                                <ul className="list-disc pl-5 space-y-2">
+                                                    {validServices.map((service) => (
+                                                        <li key={service.urlParam} className="text-sm">
+                                                            <Link
+                                                                href={`/services/${service.urlParam}`}
+                                                                className="text-blue-600 hover:text-blue-800 hover:link-hover transition-colors"
+                                                            >
+                                                                {service.serviceName}
+                                                            </Link>
+                                                            <span className='text-blue-600'>{' '}:{' '}</span>
+                                                            <p className='inline'>{service.modelPackage}</p>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
                             );
                         })}
