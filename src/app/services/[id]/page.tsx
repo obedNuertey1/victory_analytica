@@ -4,15 +4,24 @@ import Link from 'next/link';
 import { Navbar } from '@/app/components/Navbar';
 import ContactSection from '@/app/components/ContactSection/ContactSection';
 
+type OtherServiceTypes = {
+    description: string;
+    services: {
+        serviceName: string;
+        urlParam: number;
+        modelPackage: string;
+    }[];
+};
 interface ServiceFeature {
     feature: string;
-    silver: string;
-    gold: string;
-    platinum2: string;
-    platinum3: string;
-    diamond: string;
-    elite: string;
+    silver: string | OtherServiceTypes;
+    gold: string | OtherServiceTypes;
+    platinum2: string | OtherServiceTypes;
+    platinum3: string | OtherServiceTypes;
+    diamond: string | OtherServiceTypes;
+    elite: string | OtherServiceTypes;
 }
+
 
 const serviceFeatures: ServiceFeature[] = [
     {
@@ -26,93 +35,3333 @@ const serviceFeatures: ServiceFeature[] = [
     },
     {
         feature: 'USA Business Representation',
-        silver: 'Assign U.S. Representative',
-        gold: 'Assign U.S. Representative',
-        platinum2: 'Assign U.S. Representative',
-        platinum3: 'Assign U.S. Representative',
-        diamond: 'Assign U.S. Representative',
-        elite: 'Assign U.S. Representative'
+        silver: {
+            description: 'Assign U.S. Representative',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: 'Assign U.S. Representative',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'Assign U.S. Representative',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Assign U.S. Representative',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Assign U.S. Representative',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Assign U.S. Representative',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Address & Banking',
-        silver: 'Secure a U.S.–based business address. Set up a business bank account.',
-        gold: 'Secure a U.S.–based business address. Set up a business bank account.',
-        platinum2: 'Secure a U.S.–based business address. Set up a business bank account.',
-        platinum3: 'Secure a U.S.–based business address. Set up a business bank account.',
-        diamond: 'Secure a U.S.–based business address. Set up a business bank account.',
-        elite: 'Secure a U.S.–based business address. Set up a business bank account.'
+        silver: {
+            description: 'Secure a U.S.–based business address. Set up a business bank account.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: 'Secure a U.S.–based business address. Set up a business bank account.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'Secure a U.S.–based business address. Set up a business bank account.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Secure a U.S.–based business address. Set up a business bank account.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Secure a U.S.–based business address. Set up a business bank account.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Secure a U.S.–based business address. Set up a business bank account.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Networking & Market Insights',
-        silver: 'Provide connections with potential partners and insights into U.S. market trends.',
-        gold: 'Provide connections with potential partners and insights into the U.S. market.',
-        platinum2: 'Provide connections with potential partners and insights into the U.S. market.',
-        platinum3: 'Provide connections with potential partners and insights into the U.S. market.',
-        diamond: 'Provide connections with potential partners and insights into the U.S. market.',
-        elite: 'Provide connections with potential partners and insights into the U.S. market.'
+        silver: {
+            description: 'Provide connections with potential partners and insights into U.S. market trends.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: 'Provide connections with potential partners and insights into the U.S. market.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'Provide connections with potential partners and insights into the U.S. market.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Provide connections with potential partners and insights into the U.S. market.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Provide connections with potential partners and insights into the U.S. market.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Provide connections with potential partners and insights into the U.S. market.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Orientation Tour',
-        silver: 'California and Los Angeles Tour',
-        gold: 'California and Los Angeles Tour',
-        platinum2: 'California and Los Angeles Tour',
-        platinum3: 'California and Los Angeles Tour',
-        diamond: 'California and Los Angeles Tour',
-        elite: 'California and Los Angeles Tour'
+        silver: {
+            description: 'California and Los Angeles Tour',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: 'California and Los Angeles Tour',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'California and Los Angeles Tour',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'California and Los Angeles Tour',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'California and Los Angeles Tour',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'California and Los Angeles Tour',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Business Registration',
-        silver: '',
-        gold: 'Assist with California & U.S. business registration.',
-        platinum2: 'Assist with California & U.S. business registration.',
-        platinum3: 'Assist with California & U.S. business registration.',
-        diamond: 'Assist with California & U.S. business registration.',
-        elite: 'Assist with California & U.S. business registration.'
+        silver: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: 'Assist with California & U.S. business registration.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'Assist with California & U.S. business registration.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Assist with California & U.S. business registration.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Assist with California & U.S. business registration.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Assist with California & U.S. business registration.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Tax Identification',
-        silver: '',
-        gold: 'Help in applying for ITIN.',
-        platinum2: 'Help in applying for ITIN and EIN.',
-        platinum3: 'Help in applying for ITIN and EIN.',
-        diamond: 'Help in applying for ITIN and EIN.',
-        elite: 'Help in applying for ITIN, EIN, and business loan facilitation.'
+        silver: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: 'Help in applying for ITIN.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'Help in applying for ITIN and EIN.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Help in applying for ITIN and EIN.', 
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Help in applying for ITIN and EIN.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Financial & Legal Compliance',
-        silver: '',
-        gold: '',
-        platinum2: 'Introduce professional accountant to handle taxes.',
-        platinum3: 'Introduce professional accountant to handle taxes.',
-        diamond: 'Introduce professional accountant to handle taxes.',
-        elite: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.'
+        silver: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'Introduce professional accountant to handle taxes.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Introduce professional accountant to handle taxes.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Introduce professional accountant to handle taxes.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Identification',
-        silver: '',
-        gold: '',
-        platinum2: '',
-        platinum3: 'Assist with California State ID application.',
-        diamond: 'Assist with California State ID application.',
-        elite: 'Assist with California State ID application.'
+        silver: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Assist with California State ID application.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Assist with California State ID application.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Assist with California State ID application.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Legal Services & Permits',
-        silver: '',
-        gold: '',
-        platinum2: '',
-        platinum3: '',
-        diamond: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
-        elite: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.'
+        silver: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     },
     {
         feature: 'Asset Acquisition & Management',
-        silver: '',
-        gold: '',
-        platinum2: 'Guidance on identifying essential startup assets (non-financial only)',
-        platinum3: 'Initial consulting on property leasing, office setup options',
-        diamond: 'Assist with acquisition of basic operational assets and vendor sourcing',
-        elite: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.'
+        silver: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into U.S. market trends.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: '',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: '',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        gold: {
+            description: '',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: '',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: '',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum2: {
+            description: 'Guidance on identifying essential startup assets (non-financial only)',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: '',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Guidance on identifying essential startup assets (non-financial only)',
+                    urlParam: 10
+                },
+            ]
+        },
+        platinum3: {
+            description: 'Initial consulting on property leasing, office setup options',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: '',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Initial consulting on property leasing, office setup options',
+                    urlParam: 10
+                },
+            ]
+        },
+        diamond: {
+            description: 'Assist with acquisition of basic operational assets and vendor sourcing',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN and EIN.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Assist with acquisition of basic operational assets and vendor sourcing',
+                    urlParam: 10
+                },
+            ]
+        },
+        elite: {
+            description: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+            services: [
+                {
+                    serviceName: 'USA Business Representation',
+                    modelPackage: 'Assign U.S. Representative',
+                    urlParam: 1
+                },
+                {
+                    serviceName: 'Address & Banking',
+                    modelPackage: 'Secure a U.S.–based business address. Set up a business bank account.',
+                    urlParam: 2
+                },
+                {
+                    serviceName: 'Networking & Market Insights',
+                    modelPackage: 'Provide connections with potential partners and insights into the U.S. market.',
+                    urlParam: 3
+                },
+                {
+                    serviceName: 'Orientation Tour',
+                    modelPackage: 'California and Los Angeles Tour',
+                    urlParam: 4
+                },
+                {
+                    serviceName: 'Business Registration',
+                    modelPackage: 'Assist with California & U.S. business registration.',
+                    urlParam: 5
+                },
+                {
+                    serviceName: 'Tax Identification',
+                    modelPackage: 'Help in applying for ITIN, EIN, and business loan facilitation.',
+                    urlParam: 6
+                },
+                {
+                    serviceName: 'Financial & Legal Compliance',
+                    modelPackage: 'Introduce professional accountant to handle taxes and guide credit card, credit line, and business loan applications.',
+                    urlParam: 7
+                },
+                {
+                    serviceName: 'Identification',
+                    modelPackage: 'Assist with California State ID application.',
+                    urlParam: 8
+                },
+                {
+                    serviceName: 'Legal Services & Permits',
+                    modelPackage: 'Provide legal services and consultations; guide clients through U.S. work permit applications; apply for work permits for foreign employees and expand U.S. operations.',
+                    urlParam: 9
+                },
+                {
+                    serviceName: 'Asset Acquisition & Management',
+                    modelPackage: 'Full support in acquiring and managing assets (e.g., property, vehicles, tech); includes coordination with legal and financial services.',
+                    urlParam: 10
+                },
+            ]
+        }
     }
 ];
 
@@ -173,68 +3422,77 @@ export default function ServicePage({ params }: any) {
 
     return (
         <>
-        <Navbar />
-        <div className="flex flex-col self-stretch bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className='my-[4rem]' />
-            <div className="max-w-4xl mx-auto">
-                <div className="mb-8 flex items-center justify-between">
-                    <Link
-                        href="/services"
-                        className="text-blue-600 text-xl hover:text-blue-800 hover:link flex items-center"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 mr-1"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
+            <Navbar />
+            <div className="flex flex-col self-stretch bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+                <div className='my-[4rem]' />
+                <div className="max-w-4xl md:min-w-3xl lg:min-w-5xl mx-auto">
+                    <div className="mb-8 flex items-center justify-between">
+                        <Link
+                            href="/services"
+                            className="text-blue-600 text-xl hover:text-blue-800 hover:link flex items-center"
                         >
-                            <path
-                                fillRule="evenodd"
-                                d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                        All Services
-                    </Link>
-                    <span className="text-gray-500">Service #{id}</span>
-                </div>
-
-                <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">
-                    {feature.feature}
-                </h1>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                    {Object.entries(timeframes).map(([tier, timeframe]) => {
-                        const description = feature[tier as keyof ServiceFeature];
-                        const displayText = description.replace(/-/g, '').trim();
-
-                        // Skip card if empty or dash-only content
-                        if (!displayText) return null;
-
-                        return (
-                            <div
-                                key={tier}
-                                className={`rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow ${tierColors[tier as keyof typeof tierColors].bg}`}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5 mr-1"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
                             >
-                                <div className="flex justify-between items-start mb-4">
-                                    <h2 className={`text-xl font-semibold ${tierColors[tier as keyof typeof tierColors].text}`}>
-                                        {tier.charAt(0).toUpperCase() + tier.slice(1)}
-                                    </h2>
-                                    <span className={`px-3 py-1 rounded-full text-sm ${tierColors[tier as keyof typeof tierColors].accent}`}>
-                                        {timeframe}
-                                    </span>
+                                <path
+                                    fillRule="evenodd"
+                                    d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                            All Services
+                        </Link>
+                        <span className="text-gray-500">Service #{id}</span>
+                    </div>
+
+                    <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-2 border-gray-200 pb-4">
+                        {feature.feature}
+                    </h1>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        {Object.entries(timeframes).map(([tier, timeframe]) => {
+                            const serviceFeat = feature[tier as keyof ServiceFeature];
+                            let description = "description";
+                            // @ts-expect-error error occurs here
+                            const desc = serviceFeat[description as keyof OtherServiceTypes]
+
+                            const services = "services";
+
+                            // @ts-expect-error error occurs here as well
+                            const otherServices = serviceFeat[services as keyof OtherServiceTypes]
+
+                            const displayText = desc?.replace(/-/g, '').trim();
+
+                            // Skip card if empty or dash-only content
+                            if (!displayText) return null;
+
+                            return (
+                                <div
+                                    key={tier}
+                                    className={`rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow ${tierColors[tier as keyof typeof tierColors].bg}`}
+                                >
+                                    <div className="flex justify-between items-start mb-4">
+                                        <h2 className={`text-xl font-semibold ${tierColors[tier as keyof typeof tierColors].text}`}>
+                                            {tier.charAt(0).toUpperCase() + tier.slice(1)}
+                                        </h2>
+                                        <span className={`px-3 py-1 rounded-full text-sm ${tierColors[tier as keyof typeof tierColors].accent}`}>
+                                            {timeframe}
+                                        </span>
+                                    </div>
+                                    <p className={`${tierColors[tier as keyof typeof tierColors].text} opacity-90`}>
+                                        {displayText}
+                                    </p>
                                 </div>
-                                <p className={`${tierColors[tier as keyof typeof tierColors].text} opacity-90`}>
-                                    {displayText}
-                                </p>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
+                    <Link className="block shadow-sm hover:shadow-md transition-shadow transition-color h-[5rem] w-full bg-blue-600 hover:bg-blue-600/80 text-center text-white text-2xl text-bold rounded-xl" href={`/service-table?highlight=${id}`}><div className="flex flex-col items-center justify-center text-center m-auto w-full h-full"><span>All Swimlanes</span></div></Link>
                 </div>
-                <Link className="block shadow-sm hover:shadow-md transition-shadow transition-color h-[5rem] w-full bg-blue-600 hover:bg-blue-600/80 text-center text-white text-2xl text-bold rounded-xl" href={`/service-table?highlight=${id}`}><div className="flex flex-col items-center justify-center text-center m-auto w-full h-full"><span>All Swimlanes</span></div></Link>
+                <ContactSection />
             </div>
-            <ContactSection />
-        </div>
         </>
     );
 }
