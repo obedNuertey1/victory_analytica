@@ -21,7 +21,7 @@ export const ImpactSection: React.FC = () => {
   return (
     <motion.section
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden"
+      className="relative min-h-[calc(100vh-15rem)] md:min-h-screen flex items-center justify-center py-10 md:py-20 overflow-hidden"
       style={{ opacity }}
       aria-label="Impact Statistics"
     >
@@ -43,7 +43,7 @@ export const ImpactSection: React.FC = () => {
         >
           {/* ... Keep existing header and statistics grid ... */}
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-700"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-700"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5 }}
