@@ -12,9 +12,9 @@ img {
   backface-visibility: hidden;
 }
 
-/* body{
-    @apply 
-  } */
+body{
+    @apply text-black;
+  }
 
 /* Default Scrollbar */
 ::-webkit-scrollbar {
