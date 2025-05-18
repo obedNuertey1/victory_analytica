@@ -43,7 +43,7 @@ export const ImpactSection: React.FC = () => {
         >
           {/* ... Keep existing header and statistics grid ... */}
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-700"
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5 }}

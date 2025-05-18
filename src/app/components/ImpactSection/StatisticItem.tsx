@@ -14,10 +14,10 @@ export const StatisticItem: React.FC<StatisticItemProps> = ({
 }) => {
   return (
     <article className="flex flex-col items-center">
-      <h2 className="text-7xl font-bold text-gray-900 max-md:text-6xl max-sm:text-5xl">
+      <h2 className="text-7xl font-bold text-gray-600 max-md:text-6xl max-sm:text-5xl">
         {value}
       </h2>
-      <p className="text-lg text-gray-900 max-sm:text-base">{description}</p>
+      <p className="text-lg text-gray-600 max-sm:text-base">{description}</p>
     </article>
   );
 };
